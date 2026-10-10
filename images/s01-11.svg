@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">一项能力，应该怎样获得？</title>
+<desc id="desc">先判断一项能力需要怎样的控制与积累，再选择长期拥有、阶段性合作或按需调用。决定差异化、依赖持续学习或涉及关键控制权的能力值得持续拥有。阶段性专业需求可以合作，但要约定交付与交接。能够清楚描述、可靠验证和替换的能力可以按需调用。无论哪种方式，都应检查整合与验证成本、中断影响、切换难度和责任归属。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">11</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">一项能力，应该怎样获得？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">同一项能力可以组合使用不同方式，选择还会随条件变化。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="160" y="158" width="680" height="93" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.0" y="198.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="174,164,652,81">需要怎样的控制与积累？</text>
+<text x="500.0" y="232.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="174,164,652,81">差异化、背景知识、学习、关键控制、责任</text>
+<path class="connector" d="M500 251 L500 288 L205 288 L205 328" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 251 L500 288 L500 288 L500 328" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 251 L500 288 L795 288 L795 328" marker-end="url(#arrow)"/>
+<rect x="65" y="328" width="280" height="186" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="205.0" y="383.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="79,334,252,174">长期拥有</text>
+<text x="205.0" y="417.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="79,334,252,174">决定差异化</text>
+<text x="205.0" y="449.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="79,334,252,174">依赖持续学习</text>
+<text x="205.0" y="481.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="79,334,252,174">涉及关键控制</text>
+<rect x="360" y="328" width="280" height="186" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="500.0" y="383.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="374,334,252,174">阶段性合作</text>
+<text x="500.0" y="417.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="374,334,252,174">阶段性的专业需求</text>
+<text x="500.0" y="449.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="374,334,252,174">约定交付标准</text>
+<text x="500.0" y="481.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="374,334,252,174">安排知识交接</text>
+<rect x="655" y="328" width="280" height="186" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="795.0" y="383.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="669,334,252,174">按需调用</text>
+<text x="795.0" y="417.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="669,334,252,174">任务可清楚描述</text>
+<text x="795.0" y="449.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="669,334,252,174">结果可可靠验证</text>
+<text x="795.0" y="481.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="669,334,252,174">有替换与退出办法</text>
+<rect x="65" y="555" width="870" height="72" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="500.0" y="601.0" fill="#203632" font-size="24" font-weight="600" text-anchor="middle" data-region="79,561,842,60">共同检查：整合与验证成本、中断影响、切换难度、责任归属</text>
+<text x="500" y="666" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,640,910,36">能调用一种能力，并不意味着无需维护，也不意味着责任自动转移。</text>
+</svg>

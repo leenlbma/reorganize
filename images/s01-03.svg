@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">让能力放大，也让更多人成长</title>
+<desc id="desc">AI帮助更多人跨越入门门槛。获得经验和反馈的人可以承担更难的判断，并在明确授权下扩大执行能力。经过验证的好方法被整理成公共能力，支持更多人继续成长。数据、工具权限和学习机会影响这个循环能否成立，每一环都需要纠错反馈。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">03</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">让能力放大，也让更多人成长</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">资源分配要同时照顾入门机会、专家探索和公共能力建设。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="218" width="290" height="146" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="205.0" y="269.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="74,224,262,134">更多人获得入门机会</text>
+<text x="205.0" y="303.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,224,262,134">借助工具处理低风险任务</text>
+<text x="205.0" y="335.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,224,262,134">在反馈中积累判断</text>
+<rect x="650" y="218" width="290" height="146" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="795.0" y="269.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="664,224,262,134">专家扩大探索与执行</text>
+<text x="795.0" y="303.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="664,224,262,134">承担更难的问题</text>
+<text x="795.0" y="335.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="664,224,262,134">在授权范围内调用能力</text>
+<rect x="310" y="475" width="380" height="128" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="500.0" y="517.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="324,481,352,116">好方法成为公共能力</text>
+<text x="500.0" y="551.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="324,481,352,116">验证、记录、维护</text>
+<text x="500.0" y="583.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="324,481,352,116">让其他人能够可靠复用</text>
+<path class="connector" d="M350 287 L650 287" marker-end="url(#arrow)"/>
+<text x="500" y="257" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">成长与授权</text>
+<path class="connector" d="M795 364 L795 535 L690 535" marker-end="url(#arrow)"/>
+<text x="865" y="442" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">沉淀方法</text>
+<path class="connector" d="M310 535 L205 535 L205 364" marker-end="url(#arrow)"/>
+<text x="147" y="442" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">共享复用</text>
+<text x="500" y="653" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,627,910,36">数据、工具权限与学习机会需要一起分配；每一环都保留纠错反馈。</text>
+</svg>

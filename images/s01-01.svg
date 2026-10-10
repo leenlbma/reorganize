@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">先拆开工作，再决定交给谁</title>
+<desc id="desc">目标是完成一条可信的商品视频。先分别确认商品事实和检查可用素材，两类信息共同决定本次制作路径：补充证据、复用素材或重新制作。交付后检查结果，只重新处理受影响的部分。人确认事实与表达，Agent在授权内整理资料、制作和修改。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">01</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">先拆开工作，再决定交给谁</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">以商品视频为例：先看任务依赖，再安排人与 Agent 的分工。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="310" y="157" width="380" height="72" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="500.0" y="203.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="324,163,352,60">完成一条可信的商品视频</text>
+<path class="connector" d="M405 229 L405 249 L245 249 L245 277" marker-end="url(#arrow)"/>
+<path class="connector" d="M595 229 L595 249 L755 249 L755 277" marker-end="url(#arrow)"/>
+<rect x="65" y="277" width="360" height="90" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="245.0" y="316.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="79,283,332,78">确认商品事实</text>
+<text x="245.0" y="350.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="79,283,332,78">什么已经证实，什么仍缺证据</text>
+<rect x="575" y="277" width="360" height="90" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="755.0" y="316.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="589,283,332,78">检查可用素材</text>
+<text x="755.0" y="350.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="589,283,332,78">哪些能复用，哪些需要补充</text>
+<path class="connector" d="M245 367 L245 393 L405 393 L405 420" marker-end="url(#arrow)"/>
+<path class="connector" d="M755 367 L755 393 L595 393 L595 420" marker-end="url(#arrow)"/>
+<rect x="310" y="420" width="380" height="96" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="500.0" y="462.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="324,426,352,84">选择本次制作路径</text>
+<text x="500.0" y="496.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="324,426,352,84">补证据、复用素材或重新制作</text>
+<path class="connector" d="M500 516 L500 553" marker-end="url(#arrow)"/>
+<rect x="310" y="553" width="380" height="67" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="500.0" y="596.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="324,559,352,55">交付并检查结果</text>
+<path class="connector" d="M690 586 L858 586 L858 468 L690 468" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="780" y="548" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">局部修改</text>
+<text x="500" y="664" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,638,910,36">人确认事实与表达；Agent 在授权内整理资料、制作和修改。</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">信息共享以后，谁来决定？</title>
+<desc id="desc">同一份可信信息可以由项目团队、Agent、跨团队参与者和公司负责人共享。决定权按事项而不是按信息可见性分配：低风险且依赖现场信息的事项交给项目团队；规则明确、可验证、可回滚且已授权的事项可以交给Agent；多团队依赖或资源冲突需要协商并指定负责人；高风险、不可逆或公司层面的价值取舍由相应负责人决定。每项授权都需要明确边界、责任、升级和复核。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">06</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">信息共享以后，谁来决定？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">共享信息提供判断依据；决定权还要按具体事项分配。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="250" y="157" width="500" height="69" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="500.0" y="201.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="264,163,472,57">同一份可信信息</text>
+<path class="connector" d="M500 226 L500 260" marker-end="url(#arrow)"/>
+<rect x="300" y="260" width="400" height="67" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.0" y="303.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="314,266,372,55">按具体事项分配决定权</text>
+<path class="connector" d="M500 327 L500 351 L155 351 L155 378" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 327 L500 351 L385 351 L385 378" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 327 L500 351 L615 351 L615 378" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 327 L500 351 L845 351 L845 378" marker-end="url(#arrow)"/>
+<rect x="55" y="378" width="200" height="177" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="155.0" y="444.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="69,384,172,165">项目团队</text>
+<text x="155.0" y="478.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,384,172,165">低风险、可逆</text>
+<text x="155.0" y="510.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,384,172,165">依赖现场信息</text>
+<rect x="285" y="378" width="200" height="177" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="385.0" y="444.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="299,384,172,165">授权 Agent</text>
+<text x="385.0" y="478.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="299,384,172,165">规则清楚</text>
+<text x="385.0" y="510.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="299,384,172,165">可验证、可回滚</text>
+<rect x="515" y="378" width="200" height="177" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="615.0" y="444.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="529,384,172,165">跨团队协商</text>
+<text x="615.0" y="478.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="529,384,172,165">存在共同依赖</text>
+<text x="615.0" y="510.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="529,384,172,165">或资源冲突</text>
+<rect x="745" y="378" width="200" height="177" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="845.0" y="444.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="759,384,172,165">公司层面</text>
+<text x="845.0" y="478.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="759,384,172,165">高风险、难撤回</text>
+<text x="845.0" y="510.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="759,384,172,165">涉及整体取舍</text>
+<text x="500" y="614" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,588,910,36">每项授权都写清：边界、负责人、升级条件，以及异议与复核。</text>
+<text x="500" y="646" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,620,910,36">知道得更多，并不自动意味着有权接管所有决定。</text>
+</svg>

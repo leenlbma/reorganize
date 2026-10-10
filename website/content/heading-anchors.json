@@ -1,0 +1,578 @@
+{
+  "01-work.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "02-teams.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": [
+        "section-5",
+        "section-6",
+        "section-7",
+        "section-8"
+      ]
+    },
+    {
+      "id": "section-9",
+      "subheadings": []
+    },
+    {
+      "id": "section-10",
+      "subheadings": []
+    },
+    {
+      "id": "section-11",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "03-judgment-leverage.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": [
+        "section-8",
+        "section-9",
+        "section-10"
+      ]
+    },
+    {
+      "id": "section-11",
+      "subheadings": []
+    },
+    {
+      "id": "section-12",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "04-policy.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": []
+    },
+    {
+      "id": "section-8",
+      "subheadings": []
+    },
+    {
+      "id": "section-9",
+      "subheadings": []
+    },
+    {
+      "id": "section-10",
+      "subheadings": []
+    },
+    {
+      "id": "section-11",
+      "subheadings": []
+    },
+    {
+      "id": "section-12",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "05-live-state.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": [
+        "section-6",
+        "section-7",
+        "section-8"
+      ]
+    },
+    {
+      "id": "section-9",
+      "subheadings": []
+    },
+    {
+      "id": "section-10",
+      "subheadings": []
+    },
+    {
+      "id": "section-11",
+      "subheadings": []
+    },
+    {
+      "id": "section-12",
+      "subheadings": []
+    },
+    {
+      "id": "section-13",
+      "subheadings": []
+    },
+    {
+      "id": "section-14",
+      "subheadings": []
+    },
+    {
+      "id": "section-15",
+      "subheadings": []
+    }
+  ],
+  "06-decision-rights.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": [
+        "section-4",
+        "section-5"
+      ]
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": []
+    },
+    {
+      "id": "section-8",
+      "subheadings": []
+    },
+    {
+      "id": "section-9",
+      "subheadings": [
+        "section-10",
+        "section-11",
+        "section-12",
+        "section-13"
+      ]
+    },
+    {
+      "id": "section-14",
+      "subheadings": []
+    },
+    {
+      "id": "section-15",
+      "subheadings": []
+    },
+    {
+      "id": "section-16",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "07-accountability.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": [
+        "section-3",
+        "section-4",
+        "section-5"
+      ]
+    },
+    {
+      "id": "section-6",
+      "subheadings": [
+        "section-7",
+        "section-8",
+        "section-9",
+        "section-10"
+      ]
+    },
+    {
+      "id": "section-11",
+      "subheadings": []
+    },
+    {
+      "id": "section-12",
+      "subheadings": []
+    },
+    {
+      "id": "section-13",
+      "subheadings": []
+    },
+    {
+      "id": "section-14",
+      "subheadings": []
+    },
+    {
+      "id": "section-15",
+      "subheadings": []
+    },
+    {
+      "id": "section-16",
+      "subheadings": []
+    },
+    {
+      "id": "section-17",
+      "subheadings": []
+    }
+  ],
+  "08-incentives.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": []
+    },
+    {
+      "id": "section-8",
+      "subheadings": []
+    },
+    {
+      "id": "section-9",
+      "subheadings": []
+    },
+    {
+      "id": "section-10",
+      "subheadings": []
+    }
+  ],
+  "09-learning.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": []
+    },
+    {
+      "id": "section-8",
+      "subheadings": [
+        "section-9",
+        "section-10",
+        "section-11",
+        "section-12",
+        "section-13"
+      ]
+    },
+    {
+      "id": "section-14",
+      "subheadings": []
+    },
+    {
+      "id": "section-15",
+      "subheadings": []
+    },
+    {
+      "id": "section-16",
+      "subheadings": []
+    }
+  ],
+  "10-agent-management.md": [
+    {
+      "id": "section-1",
+      "subheadings": [],
+      "aliases": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": [],
+      "aliases": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": [],
+      "aliases": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": [],
+      "aliases": [
+        "section-5"
+      ]
+    },
+    {
+      "id": "intervention",
+      "subheadings": [],
+      "aliases": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": [],
+      "aliases": [
+        "section-7"
+      ]
+    },
+    {
+      "id": "people",
+      "subheadings": [],
+      "aliases": []
+    },
+    {
+      "id": "section-9",
+      "subheadings": [],
+      "aliases": [
+        "section-8",
+        "section-10"
+      ]
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "11-firm-boundaries.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": [
+        "section-5",
+        "section-6",
+        "section-7"
+      ]
+    },
+    {
+      "id": "section-8",
+      "subheadings": [
+        "section-9",
+        "section-10",
+        "section-11",
+        "section-12",
+        "section-13"
+      ]
+    },
+    {
+      "id": "section-14",
+      "subheadings": []
+    },
+    {
+      "id": "section-15",
+      "subheadings": []
+    },
+    {
+      "id": "section-16",
+      "subheadings": []
+    },
+    {
+      "id": "section-17",
+      "subheadings": []
+    },
+    {
+      "id": "section-18",
+      "subheadings": []
+    },
+    {
+      "id": "references",
+      "subheadings": []
+    }
+  ],
+  "12-five-maps.md": [
+    {
+      "id": "section-1",
+      "subheadings": []
+    },
+    {
+      "id": "section-2",
+      "subheadings": []
+    },
+    {
+      "id": "section-3",
+      "subheadings": []
+    },
+    {
+      "id": "section-4",
+      "subheadings": []
+    },
+    {
+      "id": "section-5",
+      "subheadings": []
+    },
+    {
+      "id": "section-6",
+      "subheadings": []
+    },
+    {
+      "id": "section-7",
+      "subheadings": [],
+      "aliases": [
+        "section-8",
+        "section-9"
+      ]
+    },
+    {
+      "id": "section-10",
+      "subheadings": []
+    },
+    {
+      "id": "section-11",
+      "subheadings": [],
+      "aliases": [
+        "section-12"
+      ]
+    }
+  ]
+}

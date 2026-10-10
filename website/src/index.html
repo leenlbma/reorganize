@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="LeenMa 的十二篇系列文章。AI 时代的分工、权力与人的价值：从工作与团队，到规则、决策、成长，以及重新组织的五张地图。">
+  <title>重新组织 · AI 时代的分工、权力与人的价值</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="重新组织首页"><img src="favicon.svg" width="27" height="27" alt=""><span>重新组织</span><span class="brand-en">REORGANIZE</span></a>
+    <nav class="header-links" aria-label="主导航"><a href="#/catalog">全部文章 <span>12</span></a><a href="#/maps">五张地图</a><button type="button" id="about-button">关于</button></nav>
+    <div class="header-actions"><button type="button" id="theme-button" class="icon-button" aria-label="切换为深色模式" title="切换阅读主题">◐</button><button type="button" id="mobile-menu-button" class="icon-button mobile-only" aria-label="打开阅读目录">☰</button></div>
+  </header>
+  <div id="reading-progress" aria-hidden="true"></div>
+  <main id="main" tabindex="-1"><div class="loading">正在打开《重新组织》…</div></main>
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><form method="dialog"><button class="dialog-close" aria-label="关闭">×</button></form><h2 id="about-title">关于《重新组织》</h2><p class="muted">LeenMa 著</p><p>十二篇文章，讨论 AI 时代的分工、权力与人的价值，以及我们如何一起工作。</p></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-label="配图大图"><div class="image-toolbar"><span id="image-caption"></span><a id="image-original" target="_blank" rel="noopener">单独打开 ↗</a><button id="image-close" aria-label="关闭配图">×</button></div><div class="image-viewport"><img id="image-full" alt=""></div></dialog>
+  <dialog id="navigation-dialog" class="navigation-dialog" aria-label="阅读目录"><form method="dialog"><button class="dialog-close" aria-label="关闭目录">×</button></form><div id="mobile-navigation"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>这个阅读网站需要启用 JavaScript。你也可以下载 <a href="articles/01-work.md">第一篇 Markdown</a> 阅读。</noscript>
+</body>
+</html>

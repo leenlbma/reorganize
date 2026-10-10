@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">贡献怎样得到持续回报？</title>
+<desc id="desc">贡献者整理方法并记录创作和维护投入，团队在具体场景中复用并保留改动记录。评价时检查实际结果，包括质量、收益和额外成本，而不只统计调用次数。根据事先约定兑现认可、收益、机会或时间等回报，使贡献者有条件继续建设。回报方式需要协商，不能从调用量直接推导。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">08</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">贡献怎样得到持续回报？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">先约定贡献记录、评价周期和回报方式，再开始收集经验。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="208" width="350" height="130" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="235.0" y="251.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,214,322,118">贡献方法</text>
+<text x="235.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,214,322,118">记录作者、协作者</text>
+<text x="235.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,214,322,118">以及持续维护投入</text>
+<rect x="590" y="208" width="350" height="130" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="765.0" y="251.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="604,214,322,118">团队复用</text>
+<text x="765.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,214,322,118">记录使用场景</text>
+<text x="765.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,214,322,118">保留反馈与改动</text>
+<rect x="590" y="475" width="350" height="130" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="765.0" y="518.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="604,481,322,118">检查实际结果</text>
+<text x="765.0" y="552.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,481,322,118">质量、收益</text>
+<text x="765.0" y="584.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,481,322,118">以及新增的成本</text>
+<rect x="60" y="475" width="350" height="130" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="235.0" y="518.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,481,322,118">兑现贡献回报</text>
+<text x="235.0" y="552.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,481,322,118">认可、收益、机会</text>
+<text x="235.0" y="584.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,481,322,118">或新的学习与探索时间</text>
+<path class="connector" d="M410 273 L590 273" marker-end="url(#arrow)"/>
+<text x="500" y="249" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">可被理解</text>
+<path class="connector" d="M765 338 L765 475" marker-end="url(#arrow)"/>
+<text x="852" y="408" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">定期评价</text>
+<path class="connector" d="M590 540 L410 540" marker-end="url(#arrow)"/>
+<text x="500" y="515" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">按约定回报</text>
+<path class="connector" d="M235 475 L235 338" marker-end="url(#arrow)"/>
+<text x="141" y="408" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">继续建设</text>
+<text x="500" y="655" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,629,910,36">调用次数只是线索；收益归属和维护负担，需要在合作前说清。</text>
+</svg>

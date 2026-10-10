@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">按风险选择介入方式</title>
+<desc id="desc">先判断行动是否可逆、影响范围、不确定性和价值取舍。低风险且结果可验证的任务可自主执行；高频重复且风险可观察的任务可执行后抽检；遇到证据冲突或规则越界时暂停相关动作并升级；高风险或难以撤回的事项由人决定。所有模式都需保留暂停、证据保存和升级入口。负责人需要信息、专业判断能力和干预权限。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">07</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">按风险选择介入方式</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">四种安排可按任务组合；出现新风险时，需要重新判断。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="158" width="880" height="84" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.0" y="210.0" fill="#203632" font-size="24" font-weight="600" text-anchor="middle" data-region="74,164,852,72">先看：能否撤回、影响多大、证据是否充分、是否涉及价值取舍</text>
+<path class="connector" d="M500 242 L500 268 L155 268 L155 302" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 242 L500 268 L385 268 L385 302" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 242 L500 268 L615 268 L615 302" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 242 L500 268 L845 268 L845 302" marker-end="url(#arrow)"/>
+<rect x="55" y="302" width="200" height="145" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="155.0" y="352.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="69,308,172,133">自主执行</text>
+<text x="155.0" y="386.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,308,172,133">低风险</text>
+<text x="155.0" y="418.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,308,172,133">结果可验证</text>
+<rect x="285" y="302" width="200" height="145" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="385.0" y="352.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="299,308,172,133">执行后抽检</text>
+<text x="385.0" y="386.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="299,308,172,133">高频重复</text>
+<text x="385.0" y="418.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="299,308,172,133">风险可观察</text>
+<rect x="515" y="302" width="200" height="145" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="615.0" y="352.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="529,308,172,133">异常时升级</text>
+<text x="615.0" y="386.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="529,308,172,133">证据冲突</text>
+<text x="615.0" y="418.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="529,308,172,133">或超出规则</text>
+<rect x="745" y="302" width="200" height="145" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="845.0" y="352.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="759,308,172,133">由人决定</text>
+<text x="845.0" y="386.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="759,308,172,133">高风险</text>
+<text x="845.0" y="418.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="759,308,172,133">或难以撤回</text>
+<path class="connector" d="M155 447 L155 478 L500 478"/>
+<path class="connector" d="M385 447 L385 478 L500 478"/>
+<path class="connector" d="M615 447 L615 478 L500 478"/>
+<path class="connector" d="M845 447 L845 478 L500 478"/>
+<path class="connector" d="M500 478 L500 508" marker-end="url(#arrow)"/>
+<rect x="100" y="508" width="800" height="95" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="500.0" y="549.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="114,514,772,83">发现越界或新风险：暂停相关动作</text>
+<text x="500.0" y="583.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="114,514,772,83">保留证据，交给有权处理的负责人</text>
+<text x="500" y="657" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,631,910,36">负责人须同时拥有：必要信息、判断能力，以及干预和暂停权限。</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">让新人亲自经历关键判断</title>
+<desc id="desc">新人先写下自己的判断和依据，再让Agent搜集证据，然后由新人选择下一步行动。在获得真实结果后，与导师对照预期和结果，解释差异，并修正下一次判断。Agent可以接走搜索与执行，但不能替代新人亲自面对关键选择。评价重点是能否说明依据、识别未知并随新证据改判。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">09</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">让新人亲自经历关键判断</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">在低风险任务，或隐藏答案的历史案例中，设计一次完整练习。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="208" width="260" height="130" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="190.0" y="251.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="74,214,232,118">先写自己的判断</text>
+<text x="190.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,214,232,118">提出可能原因</text>
+<text x="190.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,214,232,118">说明支持它的证据</text>
+<rect x="370" y="208" width="260" height="130" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="500.0" y="251.0" fill="#203632" font-size="25" font-weight="600" text-anchor="middle" data-region="384,214,232,118">让 Agent 搜集证据</text>
+<text x="500.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="384,214,232,118">检查假设</text>
+<text x="500.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="384,214,232,118">保留反对证据</text>
+<rect x="680" y="208" width="260" height="130" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="810.0" y="251.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="694,214,232,118">本人选择下一步</text>
+<text x="810.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="694,214,232,118">比较方案与风险</text>
+<text x="810.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="694,214,232,118">说明取舍依据</text>
+<path class="connector" d="M320 273 L370 273" marker-end="url(#arrow)"/>
+<path class="connector" d="M630 273 L680 273" marker-end="url(#arrow)"/>
+<rect x="545" y="469" width="330" height="130" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="710.0" y="512.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="559,475,302,118">观察真实结果</text>
+<text x="710.0" y="546.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="559,475,302,118">比较预期与实际</text>
+<text x="710.0" y="578.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="559,475,302,118">识别新的未知</text>
+<rect x="125" y="469" width="330" height="130" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="290.0" y="512.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="139,475,302,118">与导师复盘差异</text>
+<text x="290.0" y="546.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="139,475,302,118">解释哪里判断错了</text>
+<text x="290.0" y="578.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="139,475,302,118">更新下一次的判断</text>
+<path class="connector" d="M810 338 L810 403 L710 403 L710 469" marker-end="url(#arrow)"/>
+<path class="connector" d="M545 534 L455 534" marker-end="url(#arrow)"/>
+<path class="connector" d="M125 534 L34 534 L34 273 L60 273" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="500" y="652" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,626,910,36">评价重点：说明依据、识别未知，并能根据新证据修正判断。</text>
+</svg>

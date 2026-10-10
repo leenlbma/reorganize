@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">哪些固定，哪些可以变化？</title>
+<desc id="desc">商品事实、价格、版权和审核边界是必须满足的条件。检查当前情况后，缺少证据就先补证据，有可用素材就复用，表达需要调整就局部制作。不同路径都需要按同一组条件验收。路径可以变化，真实依赖、授权和质量要求仍然有效。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">04</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">哪些固定，哪些可以变化？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">以商品内容制作为例：根据当前情况选择路径，同时守住条件。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="158" width="880" height="77" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="500.0" y="206.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,164,852,65">必须满足：商品事实、价格、版权、审核边界</text>
+<rect x="60" y="337" width="225" height="101" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="172.5" y="381.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,343,197,89">检查当前情况</text>
+<text x="172.5" y="415.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,343,197,89">证据、素材与目标</text>
+<rect x="372" y="269" width="257" height="74" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.5" y="316.0" fill="#203632" font-size="25" font-weight="600" text-anchor="middle" data-region="386,275,229,62">缺证据：先补证据</text>
+<rect x="372" y="363" width="257" height="74" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.5" y="410.0" fill="#203632" font-size="25" font-weight="600" text-anchor="middle" data-region="386,369,229,62">有素材：直接复用</text>
+<rect x="372" y="457" width="257" height="74" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.5" y="504.0" fill="#203632" font-size="25" font-weight="600" text-anchor="middle" data-region="386,463,229,62">待调整：局部制作</text>
+<rect x="715" y="337" width="225" height="101" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="827.5" y="381.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="729,343,197,89">按条件验收</text>
+<text x="827.5" y="415.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="729,343,197,89">不满足就补充修改</text>
+<path class="connector" d="M285 387 L324 387 L324 306 L372 306" marker-end="url(#arrow)"/>
+<path class="connector" d="M324 387 L324 400 L372 400" marker-end="url(#arrow)"/>
+<path class="connector" d="M324 400 L324 494 L372 494" marker-end="url(#arrow)"/>
+<path class="connector" d="M629 306 L675 306 L675 387 L715 387" marker-end="url(#arrow)"/>
+<path class="connector" d="M629 400 L675 400 L675 387"/>
+<path class="connector" d="M629 494 L675 494 L675 400"/>
+<text x="500" y="604" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,578,910,36">路径可以变化，真实依赖、授权范围与质量要求仍要清楚。</text>
+<text x="500" y="636" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,610,910,36">某一步能否省略，取决于条件是否已满足。</text>
+</svg>

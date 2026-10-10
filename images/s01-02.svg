@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">哪些协作值得保留？</title>
+<desc id="desc">团队围绕共同结果发挥四类作用：补充缺少的能力，带入不同视角，共同作出判断，以及共同承担后果。AI可以支持这些活动，但需要明确谁带入了哪些视角、谁参与选择、谁持续承担承诺。仅仅传递信息的交接可以检查是否有简化空间。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">02</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">哪些协作值得保留？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">逐一确认一段协作贡献了什么，再决定怎样组织团队。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="180" width="350" height="146" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="235.0" y="231.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,186,322,134">补充缺少的能力</text>
+<text x="235.0" y="265.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,186,322,134">研究、设计、工程</text>
+<text x="235.0" y="297.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,186,322,134">让工作能够完成</text>
+<rect x="590" y="180" width="350" height="146" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="765.0" y="231.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="604,186,322,134">带入不同视角</text>
+<text x="765.0" y="265.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,186,322,134">经历、专业、利益位置</text>
+<text x="765.0" y="297.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,186,322,134">让盲点进入讨论</text>
+<rect x="60" y="471" width="350" height="146" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="235.0" y="522.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,477,322,134">共同作出判断</text>
+<text x="235.0" y="556.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,477,322,134">讨论目标、质量与风险</text>
+<text x="235.0" y="588.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,477,322,134">选择愿意投入的方向</text>
+<rect x="590" y="471" width="350" height="146" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="765.0" y="522.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="604,477,322,134">共同承担后果</text>
+<text x="765.0" y="556.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,477,322,134">履行用户承诺</text>
+<text x="765.0" y="588.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,477,322,134">持续处理长期影响</text>
+<rect x="350" y="366" width="300" height="61" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.0" y="406.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="364,372,272,49">团队的共同结果</text>
+<path class="connector" d="M235 326 L235 396 L350 396" marker-end="url(#arrow)"/>
+<path class="connector" d="M765 326 L765 396 L650 396" marker-end="url(#arrow)"/>
+<path class="connector" d="M235 471 L235 396 L350 396" marker-end="url(#arrow)"/>
+<path class="connector" d="M765 471 L765 396 L650 396" marker-end="url(#arrow)"/>
+<text x="500" y="662" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,636,910,36">AI 可以支持这些活动；人的视角、选择与承诺仍需明确。</text>
+</svg>

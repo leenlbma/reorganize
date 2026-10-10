@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">用五张地图检查一次退款处理</title>
+<desc id="desc">工作地图检查退款怎样完成以及人与Agent怎样协作。状态地图区分已确认、推断和未知，并保留订单与沟通证据。决定权地图明确谁有权处理、谁受理异议和复核。本次试行由客服确认处理，Agent只整理材料和建议，不退款、不关单；规则外由业务负责人复核，并保留暂停入口。价值地图检查谁受益、谁承担成本、贡献怎样回报，并同时记录用户结果、处理负担与维护投入。学习地图检查哪些失败改变规则、哪些判断成为新人练习。先改变一个摩擦点，比较结果，再决定是否扩大。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">12</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">用五张地图检查一次退款处理</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">假设示例：围绕同一件工作，核对任务、依据、权力、利益与学习。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="50" y="160" width="900" height="82" rx="14" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="151" y="209" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="62,169,178,65">工作地图</text>
+<path d="M250 176 V226" stroke="#D7DED7"/>
+<text x="276" y="191" fill="#203632" font-size="24" font-weight="600" text-anchor="start" data-region="269,164,660,74">怎样完成退款，何处需要人与 Agent 协作？</text>
+<text x="276" y="225" fill="#586761" font-size="22" font-weight="400" text-anchor="start" data-region="269,164,660,74">查证、提出方案、确认、执行，各有明确承接者。</text>
+<rect x="50" y="251" width="900" height="82" rx="14" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="151" y="300" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="62,260,178,65">状态地图</text>
+<path d="M250 267 V317" stroke="#D7DED7"/>
+<text x="276" y="282" fill="#203632" font-size="24" font-weight="600" text-anchor="start" data-region="269,255,660,74">哪些已确认、哪些是推断、哪里仍未知？</text>
+<text x="276" y="316" fill="#586761" font-size="22" font-weight="400" text-anchor="start" data-region="269,255,660,74">保留订单与沟通证据；遇到冲突先补充查证。</text>
+<rect x="50" y="342" width="900" height="82" rx="14" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="151" y="391" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="62,351,178,65">决定权地图</text>
+<path d="M250 358 V408" stroke="#D7DED7"/>
+<text x="276" y="373" fill="#203632" font-size="24" font-weight="600" text-anchor="start" data-region="269,346,660,74">谁有权处理，谁受理异议和复核？</text>
+<text x="276" y="407" fill="#586761" font-size="22" font-weight="400" text-anchor="start" data-region="269,346,660,74">客服确认处理；Agent 只整理与建议，保留暂停入口。</text>
+<rect x="50" y="433" width="900" height="82" rx="14" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="151" y="482" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="62,442,178,65">价值地图</text>
+<path d="M250 449 V499" stroke="#D7DED7"/>
+<text x="276" y="464" fill="#203632" font-size="24" font-weight="600" text-anchor="start" data-region="269,437,660,74">谁受益、谁承担成本，贡献怎样回报？</text>
+<text x="276" y="498" fill="#586761" font-size="22" font-weight="400" text-anchor="start" data-region="269,437,660,74">同时记录用户结果、处理负担和方法维护投入。</text>
+<rect x="50" y="524" width="900" height="82" rx="14" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="151" y="573" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="62,533,178,65">学习地图</text>
+<path d="M250 540 V590" stroke="#D7DED7"/>
+<text x="276" y="555" fill="#203632" font-size="24" font-weight="600" text-anchor="start" data-region="269,528,660,74">哪些失败改变规则，哪些判断留作练习？</text>
+<text x="276" y="589" fill="#586761" font-size="22" font-weight="400" text-anchor="start" data-region="269,528,660,74">复核后更新方法，用案例培养下一次判断。</text>
+<text x="500" y="659" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,633,910,36">先改变一个摩擦点，比较结果，再决定是否扩大。</text>
+</svg>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "当“组织工作”本身也能被 AI 执行",
+    "file": "01-work.md",
+    "part": 0,
+    "tag": "工作"
+  },
+  {
+    "id": 2,
+    "title": "超级个体之后，为什么还需要团队？",
+    "file": "02-teams.md",
+    "part": 0,
+    "tag": "团队"
+  },
+  {
+    "id": 3,
+    "title": "AI 会拉平差距，还是放大强者？",
+    "file": "03-judgment-leverage.md",
+    "part": 0,
+    "tag": "能力与资源"
+  },
+  {
+    "id": 4,
+    "title": "AI 时代，我们还需要“流程”吗？",
+    "file": "04-policy.md",
+    "part": 1,
+    "tag": "规则"
+  },
+  {
+    "id": 5,
+    "title": "谁有权定义组织的事实？",
+    "file": "05-live-state.md",
+    "part": 1,
+    "tag": "事实与状态"
+  },
+  {
+    "id": 6,
+    "title": "组织变扁了，权力却可能更集中",
+    "file": "06-decision-rights.md",
+    "part": 1,
+    "tag": "决定权"
+  },
+  {
+    "id": 7,
+    "title": "当 AI 开始承担工作，谁来承担责任？",
+    "file": "07-accountability.md",
+    "part": 1,
+    "tag": "责任"
+  },
+  {
+    "id": 8,
+    "title": "把经验教给 AI，员工为什么愿意？",
+    "file": "08-incentives.md",
+    "part": 2,
+    "tag": "贡献与回报"
+  },
+  {
+    "id": 9,
+    "title": "AI 接走了初级工作，下一代专家从哪里来？",
+    "file": "09-learning.md",
+    "part": 2,
+    "tag": "学习"
+  },
+  {
+    "id": 10,
+    "title": "当 Agent 成为组织成员，管理者到底在管理什么？",
+    "file": "10-agent-management.md",
+    "part": 3,
+    "tag": "管理"
+  },
+  {
+    "id": 11,
+    "title": "当能力都可以调用，我们为什么还需要公司？",
+    "file": "11-firm-boundaries.md",
+    "part": 3,
+    "tag": "公司边界"
+  },
+  {
+    "id": 12,
+    "title": "不要先改组织架构：如何真正开始「重新组织」",
+    "file": "12-five-maps.md",
+    "part": 3,
+    "tag": "五张地图"
+  }
+]

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">一条组织状态，怎样才可信？</title>
+<desc id="desc">原始证据应记录来源、时间和责任人。形成状态时，分别标记已确认、推断或未知：已确认有明确依据，推断保留解释与不确定性，未知说明证据缺失或冲突，留下争议意见并继续核对。使用状态时携带标签和证据。受影响的人可以提出异议并附上新证据，由指定责任人复核、纠错、保留修改记录并通知受影响的使用者。新证据再更新状态，不能直接覆盖仍存在的分歧。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">05</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">一条组织状态，怎样才可信？</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">证据、状态标签和纠错入口，需要随记录一起保留。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="325" y="158" width="350" height="83" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="500.0" y="193.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="339,164,322,71">原始证据</text>
+<text x="500.0" y="227.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="339,164,322,71">来源、时间、责任人</text>
+<path class="connector" d="M500 241 L500 262 L190 262 L190 286" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 241 L500 262 L500 262 L500 286" marker-end="url(#arrow)"/>
+<path class="connector" d="M500 241 L500 262 L810 262 L810 286" marker-end="url(#arrow)"/>
+<rect x="55" y="286" width="270" height="116" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="190.0" y="322.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="69,292,242,104">已确认</text>
+<text x="190.0" y="356.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,292,242,104">有明确依据</text>
+<text x="190.0" y="388.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="69,292,242,104">保留确认人或数据来源</text>
+<rect x="365" y="286" width="270" height="116" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="500.0" y="322.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="379,292,242,104">推断</text>
+<text x="500.0" y="356.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="379,292,242,104">说明判断依据</text>
+<text x="500.0" y="388.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="379,292,242,104">保留不确定性</text>
+<rect x="675" y="286" width="270" height="116" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="810.0" y="322.0" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="689,292,242,104">未知</text>
+<text x="810.0" y="356.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="689,292,242,104">证据缺失或冲突</text>
+<text x="810.0" y="388.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="689,292,242,104">留下争议，继续核对</text>
+<path class="connector" d="M190 402 L190 422 L500 422"/>
+<path class="connector" d="M500 402 L500 422 L500 422"/>
+<path class="connector" d="M810 402 L810 422 L500 422"/>
+<path class="connector" d="M500 422 L500 445" marker-end="url(#arrow)"/>
+<rect x="325" y="445" width="350" height="65" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="500.0" y="487.5" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="339,451,322,53">带着标签与证据使用</text>
+<path class="connector" d="M405 510 L405 529 L225 529 L225 550" marker-end="url(#arrow)"/>
+<rect x="60" y="550" width="330" height="97" rx="16" fill="#FFFFFF" stroke="#D7DED7"/>
+<text x="225.0" y="592.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="74,556,302,85">提出异议</text>
+<text x="225.0" y="626.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,556,302,85">受影响的人可补充新证据</text>
+<path class="connector" d="M390 600 L610 600" marker-end="url(#arrow)"/>
+<text x="500" y="580" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">提交复核</text>
+<rect x="610" y="550" width="330" height="97" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="775.0" y="592.5" fill="#203632" font-size="27" font-weight="600" text-anchor="middle" data-region="624,556,302,85">复核与纠错</text>
+<text x="775.0" y="626.5" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="624,556,302,85">留痕并通知相关使用者</text>
+<path class="connector" d="M940 597 L972 597 L972 199 L675 199" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="800" y="181" fill="#586761" font-size="23" font-weight="400" text-anchor="middle">新证据更新状态</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">把一次投诉变成下一次改进</title>
+<desc id="desc">处理投诉前，约定解决用户问题的目标及退款、转人工等边界。再安排谁查证、谁决定和谁执行，使人与Agent分工清楚。完成后评价用户问题是否解决，并记录耗时、误判和新增负担。经复核的失败原因用于更新规则与训练案例，小范围验证后进入下一轮工作。目标或评价发生争议时，需要由负责人组织复核，不能只优化单一指标。</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#7A8982" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<style>text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; } .connector { fill:none; stroke:#7A8982; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; } </style>
+<rect width="1000" height="700" rx="24" fill="#F8F7F3"/>
+<rect x="1" y="1" width="998" height="698" rx="23" fill="none" stroke="#D7DED7"/>
+
+<text x="50" y="57" fill="#245E50" font-size="22" font-weight="600" text-anchor="start">10</text>
+<text x="98" y="59" fill="#203632" font-size="34" font-weight="600" text-anchor="start" data-region="95,15,850,62">把一次投诉变成下一次改进</text>
+<text x="50" y="107" fill="#586761" font-size="23" font-weight="400" text-anchor="start" data-region="46,77,905,40">假设示例：管理者需要照看目标、协作、评价和反馈之间的关系。</text>
+<path d="M50 132 H950" stroke="#D7DED7"/>
+<rect x="60" y="202" width="350" height="142" rx="16" fill="#E3EFEB" stroke="#D7DED7"/>
+<text x="235.0" y="251.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="74,208,322,130">约定目标与边界</text>
+<text x="235.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,208,322,130">解决用户问题</text>
+<text x="235.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,208,322,130">写清退款与转人工条件</text>
+<rect x="590" y="202" width="350" height="142" rx="16" fill="#E6EDF5" stroke="#D7DED7"/>
+<text x="765.0" y="251.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="604,208,322,130">安排人与 Agent 协作</text>
+<text x="765.0" y="285.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,208,322,130">谁查证、谁决定</text>
+<text x="765.0" y="317.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,208,322,130">谁执行、谁能暂停</text>
+<rect x="590" y="473" width="350" height="142" rx="16" fill="#F5EDD9" stroke="#D7DED7"/>
+<text x="765.0" y="522.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="604,479,322,130">评价结果与代价</text>
+<text x="765.0" y="556.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,479,322,130">问题是否解决</text>
+<text x="765.0" y="588.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="604,479,322,130">耗时、误判与新增负担</text>
+<rect x="60" y="473" width="350" height="142" rx="16" fill="#F2E6E1" stroke="#D7DED7"/>
+<text x="235.0" y="522.0" fill="#203632" font-size="26" font-weight="600" text-anchor="middle" data-region="74,479,322,130">更新规则与练习</text>
+<text x="235.0" y="556.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,479,322,130">复核失败原因</text>
+<text x="235.0" y="588.0" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="74,479,322,130">小范围验证修改效果</text>
+<path class="connector" d="M410 273 L590 273" marker-end="url(#arrow)"/>
+<path class="connector" d="M765 344 L765 473" marker-end="url(#arrow)"/>
+<path class="connector" d="M590 544 L410 544" marker-end="url(#arrow)"/>
+<path class="connector" d="M235 473 L235 344" marker-end="url(#arrow)"/>
+<text x="500" y="409" fill="#245E50" font-size="26" font-weight="600" text-anchor="middle">管理者维护整条循环</text>
+<text x="500" y="662" fill="#586761" font-size="23" font-weight="400" text-anchor="middle" data-region="45,636,910,36">目标或评价有争议时，由负责人组织复核，再调整下一轮工作。</text>
+</svg>
