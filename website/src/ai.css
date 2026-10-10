@@ -1,0 +1,24 @@
+.ai-entry{display:inline-flex;align-items:center;white-space:nowrap;font-size:12px;padding:0 9px;min-height:34px}
+.ai-entry:hover{color:var(--accent)}
+.ai-site-header .header-actions{margin-left:auto}
+.ai-page{max-width:1040px;margin:0 auto;padding:65px 5.5% 0}
+.ai-intro{margin-bottom:42px}
+.ai-intro .season-line{margin-bottom:24px}
+.ai-intro h1{font-family:var(--serif);font-size:clamp(38px,4.7vw,62px);line-height:1.3;font-weight:650;letter-spacing:-.03em;margin-bottom:23px}
+.ai-intro h1 em{font-style:normal;color:var(--accent)}
+.ai-description{color:var(--muted);font-size:15px;line-height:1.95;margin-bottom:0}
+.ai-page h2{font-family:var(--serif);font-size:25px;font-weight:600;line-height:1.5;margin:12px 0}
+.ai-start{border-top:2px solid var(--accent);padding:27px 30px 10px;background:var(--soft)}
+.ai-start>p,.ai-options p{font-size:13px;color:var(--muted);line-height:1.9}
+.ai-link-row{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-top:24px}
+.ai-link-row>a{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;overflow-wrap:anywhere;line-height:1.8;text-decoration:underline;text-underline-offset:4px}
+.ai-link-row .primary-button{flex-shrink:0;font-size:12px;gap:22px}
+.ai-copy-status{min-height:24px;margin:9px 0 0!important;font-size:12px!important}
+.ai-options{display:grid;grid-template-columns:1fr 1fr;margin:34px 0 28px}
+.ai-options section{padding:10px 28px 12px 0}
+.ai-options section+section{border-left:1px solid var(--line);padding:10px 0 12px 28px}
+.ai-options p{margin:0 0 18px}
+.ai-note{font-size:12px;color:var(--muted);padding-top:25px;border-top:1px solid var(--line);margin-bottom:30px}
+.ai-page .site-footer{border-top:0}
+.ai-page .site-footer>div{display:flex;gap:20px}
+@media(max-width:760px){.ai-entry{padding:0 4px;font-size:11px;min-height:30px}.site-header .header-links{display:none}.site-header .header-actions{margin-left:auto}.ai-page{padding:38px 6% 0}.ai-intro{margin-bottom:30px}.ai-description{font-size:13px}.ai-start{padding:23px 20px 10px}.ai-link-row{align-items:stretch;flex-direction:column;gap:17px}.ai-link-row>a{font-size:12px}.ai-link-row .primary-button{align-self:flex-start}.ai-options{grid-template-columns:1fr;gap:23px}.ai-options section{padding:0}.ai-options section+section{padding:23px 0 0;border-left:0;border-top:1px solid var(--line)}.ai-note{font-size:11px}.ai-page .site-footer{flex-wrap:wrap;gap:12px}}

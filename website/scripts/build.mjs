@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { marked } from './vendor/marked.mjs';
+import { buildAI } from './build-ai.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const repo = path.dirname(site);
@@ -77,4 +78,5 @@ for (const chapter of chapters) {
   fs.copyFileSync(path.join(repo, 'articles', chapter.file), path.join(output, 'articles', chapter.file));
 }
 fs.writeFileSync(path.join(output, 'content.json'), JSON.stringify(chapters));
-console.log(`Built ${chapters.length} articles and ${chapters.length} diagrams.`);
+buildAI({repo, output, chapters});
+console.log(`Built ${chapters.length} articles, ${chapters.length} diagrams and AI reading files.`);

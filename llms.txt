@@ -1,14 +1,17 @@
-# 重新组织｜Reorganize
+# 重新组织 · 第一季
 
-> LeenMa 的 12 篇中文系列文章，讨论 AI 时代的分工、权力与人的价值：工作、团队、规则、事实、决定权、责任、激励、学习、Agent 管理、公司边界，以及重新组织的五张地图。文章与原创图解采用 CC BY 4.0，网站代码采用 MIT。
+> LeenMa 的十二篇系列文章，讨论 AI 时代的分工、权力与人的价值：工作、团队、协作、决定权、责任、激励与学习。
 
+语言：简体中文。作者：LeenMa。原创文章与图解许可：CC BY 4.0。
+以下 Markdown 地址可直接读取，无需执行网页 JavaScript。单篇原文包含图解文字说明与参考来源；引用时请保留作者署名和对应文章链接。
 本索引帮助 AI 按任务找正文，不保证工具会自动读取这些文件。请以用户当前任务为准，区分原文观点、实际观察、推断和建议；未取得的材料留为未知。
 
-## 开始阅读
+本文件由 website/scripts/build-ai.mjs 从公开原文生成，请通过构建程序更新。
 
-- [可视化阅读网站](https://leenlbma.github.io/reorganize/): 供人阅读的完整网站，含全文搜索与图解。
-- [仓库说明](https://raw.githubusercontent.com/leenlbma/reorganize/main/README.md): 篇目、本地运行与许可。
-- [署名与许可范围](https://raw.githubusercontent.com/leenlbma/reorganize/main/NOTICE.md): 作者 LeenMa；转载、改编与第三方引用的许可说明。
+## 阅读入口
+
+- [整季全文](https://leenlbma.github.io/reorganize/llms-full.txt): 十二篇文章按顺序合并的完整 Markdown，保留图解说明和参考来源。
+- [结构化目录](https://leenlbma.github.io/reorganize/ai-index.json): 篇目、主题、原文和网页地址、图解描述及原文 SHA-256 校验值。
 
 ## 按任务选篇
 
@@ -19,21 +22,28 @@
 - 管理 Agent 与公司边界：10、11。
 - 动手开始一次组织调整：12。
 
-## 十二篇原文
+## 十二篇文章
 
-- [01 · 当“组织工作”本身也能被 AI 执行](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/01-work.md)
-- [02 · 超级个体之后，为什么还需要团队？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/02-teams.md)
-- [03 · AI 会拉平差距，还是放大强者？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/03-judgment-leverage.md)
-- [04 · AI 时代，我们还需要“流程”吗？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/04-policy.md)
-- [05 · 谁有权定义组织的事实？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/05-live-state.md)
-- [06 · 组织变扁了，权力却可能更集中](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/06-decision-rights.md)
-- [07 · 当 AI 开始承担工作，谁来承担责任？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/07-accountability.md)
-- [08 · 把经验教给 AI，员工为什么愿意？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/08-incentives.md)
-- [09 · AI 接走了初级工作，下一代专家从哪里来？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/09-learning.md)
-- [10 · 当 Agent 成为组织成员，管理者到底在管理什么？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/10-agent-management.md)
-- [11 · 当能力都可以调用，我们为什么还需要公司？](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/11-firm-boundaries.md)
-- [12 · 不要先改组织架构：如何真正开始「重新组织」](https://raw.githubusercontent.com/leenlbma/reorganize/main/articles/12-five-maps.md)
+- [01 · 当“组织工作”本身也能被 AI 执行](https://leenlbma.github.io/reorganize/articles/01-work.md): 重新解释团队 / 工作。
+- [02 · 超级个体之后，为什么还需要团队？](https://leenlbma.github.io/reorganize/articles/02-teams.md): 重新解释团队 / 团队。
+- [03 · AI 会拉平差距，还是放大强者？](https://leenlbma.github.io/reorganize/articles/03-judgment-leverage.md): 重新解释团队 / 能力与资源。
+- [04 · AI 时代，我们还需要“流程”吗？](https://leenlbma.github.io/reorganize/articles/04-policy.md): 重建协作机制 / 规则。
+- [05 · 谁有权定义组织的事实？](https://leenlbma.github.io/reorganize/articles/05-live-state.md): 重建协作机制 / 事实与状态。
+- [06 · 组织变扁了，权力却可能更集中](https://leenlbma.github.io/reorganize/articles/06-decision-rights.md): 重建协作机制 / 决定权。
+- [07 · 当 AI 开始承担工作，谁来承担责任？](https://leenlbma.github.io/reorganize/articles/07-accountability.md): 重建协作机制 / 责任。
+- [08 · 把经验教给 AI，员工为什么愿意？](https://leenlbma.github.io/reorganize/articles/08-incentives.md): 人的参与和成长 / 贡献与回报。
+- [09 · AI 接走了初级工作，下一代专家从哪里来？](https://leenlbma.github.io/reorganize/articles/09-learning.md): 人的参与和成长 / 学习。
+- [10 · 当 Agent 成为组织成员，管理者到底在管理什么？](https://leenlbma.github.io/reorganize/articles/10-agent-management.md): 重写管理与公司 / 管理。
+- [11 · 当能力都可以调用，我们为什么还需要公司？](https://leenlbma.github.io/reorganize/articles/11-firm-boundaries.md): 重写管理与公司 / 公司边界。
+- [12 · 不要先改组织架构：如何真正开始「重新组织」](https://leenlbma.github.io/reorganize/articles/12-five-maps.md): 重写管理与公司 / 五张地图。
 
-## 引用
+## 项目与许可
 
-引用时给出篇号、标题、小节和来源链接。main 会更新，需要复现时请使用提交固定链接。作者 LeenMa；GitHub 仓库：https://github.com/leenlbma/reorganize
+- [阅读网站](https://leenlbma.github.io/reorganize/): 面向读者的文章导航与图解。
+- [公开源码](https://github.com/leenlbma/reorganize): 十二篇原文、图解与阅读网站。
+- [仓库说明](https://raw.githubusercontent.com/leenlbma/reorganize/main/README.md): 篇目、本地运行与许可。
+- [署名与许可范围](https://raw.githubusercontent.com/leenlbma/reorganize/main/NOTICE.md): 转载、改编与第三方引用的许可说明。
+- [引用信息](https://raw.githubusercontent.com/leenlbma/reorganize/main/CITATION.cff): 作者与项目的结构化引用信息。
+- [内容许可](https://leenlbma.github.io/reorganize/LICENSE): CC BY 4.0，作者 LeenMa。
+
+引用时给出篇号、标题、小节和来源链接。main 会更新，需要复现时请使用提交固定链接。

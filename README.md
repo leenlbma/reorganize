@@ -4,7 +4,16 @@
 
 LeenMa 的十二篇系列文章，讨论 AI 如何改变工作、团队、协作、决定权、责任、激励和学习。本仓库包含文章、对应图解和阅读网站的完整源码。
 
-[在线阅读](https://leenlbma.github.io/reorganize/)
+[在线阅读](https://leenlbma.github.io/reorganize/) · [AI 阅读入口](https://leenlbma.github.io/reorganize/ai.html)
+
+## 给 Agent 阅读
+
+将 [llms.txt](https://leenlbma.github.io/reorganize/llms.txt) 的链接交给 Agent，可按目录直接读取每篇 Markdown，无需执行网页 JavaScript。
+
+- [llms-full.txt](https://leenlbma.github.io/reorganize/llms-full.txt)：十二篇完整文章，包含图解文字说明与参考来源。
+- [ai-index.json](https://leenlbma.github.io/reorganize/ai-index.json)：结构化篇目、原文地址、图解描述和原文 SHA-256 校验值。
+
+以上内容在构建时从公开原文生成，随文章同步更新；作者与内容许可保持不变。根目录的 `llms.txt` 也由构建程序生成，与网站目录一致；修改文章后运行构建，并提交更新后的目录。
 
 ## English summary
 

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="《重新组织》的 AI 阅读入口：十二篇文章的 Markdown 目录、整季全文和结构化索引，LeenMa 著。">
+  <title>AI 阅读入口 · 重新组织</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ai.css">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="AI 阅读目录">
+  <link rel="alternate" type="application/json" href="ai-index.json" title="文章结构化目录">
+  <script src="ai.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header ai-site-header">
+    <a class="brand" href="./" aria-label="重新组织首页"><img src="favicon.svg" width="27" height="27" alt=""><span>重新组织</span><span class="brand-en">REORGANIZE</span></a>
+    <div class="header-actions"><a class="ai-entry" href="./">返回阅读 ↗</a><button type="button" id="theme-button" class="icon-button" aria-label="切换为深色模式" title="切换阅读主题" hidden>◐</button></div>
+  </header>
+  <main class="ai-page" id="main" tabindex="-1">
+    <header class="ai-intro">
+      <p class="eyebrow season-line">REORGANIZE / FOR AGENTS</p>
+      <h1>让 AI 读懂，<br>再一起讨论<em>。</em></h1>
+      <p class="ai-description">十二篇文章、图解文字说明与参考来源。<br>把入口链接交给你的 Agent，按问题选择篇章，或一次读取整季全文。</p>
+    </header>
+    <section class="ai-start" aria-labelledby="ai-start-title">
+      <div class="eyebrow accent">01 / 推荐从这里开始</div>
+      <h2 id="ai-start-title">把这个链接交给 Agent</h2>
+      <p>轻量目录包含每篇文章的原文地址，以及整季全文和图解的入口。</p>
+      <div class="ai-link-row"><a id="ai-directory-link" href="llms.txt">https://leenlbma.github.io/reorganize/llms.txt</a><button type="button" class="primary-button" id="copy-ai-link" hidden>复制入口链接 <span aria-hidden="true">↗</span></button></div>
+      <p class="ai-copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    </section>
+    <div class="ai-options">
+      <section aria-labelledby="ai-full-title">
+        <div class="eyebrow">02 / 一次读完</div>
+        <h2 id="ai-full-title">整季全文</h2>
+        <p>按顺序汇集十二篇原文，保留图解说明和参考来源。适合需要通读、对照或讨论整个系列时使用。</p>
+        <a class="text-link" href="llms-full.txt">打开全文 Markdown ↗</a>
+      </section>
+      <section aria-labelledby="ai-index-title">
+        <div class="eyebrow">03 / 按篇读取</div>
+        <h2 id="ai-index-title">结构化目录</h2>
+        <p>为工具提供篇目、原文地址、图解说明和版本校验信息，方便选择文章、定位来源与检查更新。</p>
+        <a class="text-link" href="ai-index.json">打开 JSON 目录 ↗</a>
+      </section>
+    </div>
+    <p class="ai-note">目录与全文由同一份公开原文自动生成，随文章更新。引用时请保留 LeenMa 署名与对应文章链接。</p>
+    <footer class="site-footer"><span>LeenMa · 《重新组织》第一季</span><div><a href="LICENSE">CC BY 4.0 ↗</a><a href="https://github.com/leenlbma/reorganize">GitHub ↗</a></div></footer>
+  </main>
+</body>
+</html>

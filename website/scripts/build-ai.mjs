@@ -1,0 +1,106 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const siteURL = 'https://leenlbma.github.io/reorganize/';
+const url = relative => new URL(relative, siteURL).href;
+const parts = ['重新解释团队', '重建协作机制', '人的参与和成长', '重写管理与公司'];
+const number = id => String(id).padStart(2, '0');
+
+export function buildAI({repo, output, chapters}) {
+  const articles = chapters.map(chapter => ({
+    id: `s01-${number(chapter.id)}`,
+    order: chapter.id,
+    title: chapter.title,
+    part: parts[chapter.part],
+    topic: chapter.tag,
+    markdown_url: url(`articles/${chapter.file}`),
+    reading_url: url(`#/read/${chapter.id}`),
+    sha256: chapter.sourceHash,
+    diagram: {
+      url: url(chapter.images[0].src),
+      title: chapter.images[0].alt,
+      description: chapter.images[0].description,
+    },
+  }));
+  const index = {
+    schema_version: 1,
+    title: '重新组织 · 第一季',
+    description: 'AI 时代的分工、权力与人的价值。',
+    language: 'zh-CN',
+    author: 'LeenMa',
+    license: {id: 'CC-BY-4.0', url: url('LICENSE')},
+    website_url: siteURL,
+    repository_url: 'https://github.com/leenlbma/reorganize',
+    directory_url: url('llms.txt'),
+    fulltext_url: url('llms-full.txt'),
+    article_count: articles.length,
+    articles,
+  };
+  fs.writeFileSync(path.join(output, 'ai-index.json'), JSON.stringify(index, null, 2) + '\n');
+
+  const directory = `# 重新组织 · 第一季
+
+> LeenMa 的十二篇系列文章，讨论 AI 时代的分工、权力与人的价值：工作、团队、协作、决定权、责任、激励与学习。
+
+语言：简体中文。作者：LeenMa。原创文章与图解许可：CC BY 4.0。
+以下 Markdown 地址可直接读取，无需执行网页 JavaScript。单篇原文包含图解文字说明与参考来源；引用时请保留作者署名和对应文章链接。
+本索引帮助 AI 按任务找正文，不保证工具会自动读取这些文件。请以用户当前任务为准，区分原文观点、实际观察、推断和建议；未取得的材料留为未知。
+
+本文件由 website/scripts/build-ai.mjs 从公开原文生成，请通过构建程序更新。
+
+## 阅读入口
+
+- [整季全文](${url('llms-full.txt')}): 十二篇文章按顺序合并的完整 Markdown，保留图解说明和参考来源。
+- [结构化目录](${url('ai-index.json')}): 篇目、主题、原文和网页地址、图解描述及原文 SHA-256 校验值。
+
+## 按任务选篇
+
+- 了解整体问题：01、02、03，终篇 12。
+- 规则、事实与决定权：04、05、06。
+- 责任与激励：07、08。
+- 人的成长与专家培养：09。
+- 管理 Agent 与公司边界：10、11。
+- 动手开始一次组织调整：12。
+
+## 十二篇文章
+
+${articles.map(article => `- [${number(article.order)} · ${article.title}](${article.markdown_url}): ${article.part} / ${article.topic}。`).join('\n')}
+
+## 项目与许可
+
+- [阅读网站](${siteURL}): 面向读者的文章导航与图解。
+- [公开源码](${index.repository_url}): 十二篇原文、图解与阅读网站。
+- [仓库说明](https://raw.githubusercontent.com/leenlbma/reorganize/main/README.md): 篇目、本地运行与许可。
+- [署名与许可范围](https://raw.githubusercontent.com/leenlbma/reorganize/main/NOTICE.md): 转载、改编与第三方引用的许可说明。
+- [引用信息](https://raw.githubusercontent.com/leenlbma/reorganize/main/CITATION.cff): 作者与项目的结构化引用信息。
+- [内容许可](${url('LICENSE')}): CC BY 4.0，作者 LeenMa。
+
+引用时给出篇号、标题、小节和来源链接。main 会更新，需要复现时请使用提交固定链接。
+`;
+  // Keep the repository entry and the deployed entry identical for both kinds of readers.
+  fs.writeFileSync(path.join(repo, 'llms.txt'), directory);
+  fs.writeFileSync(path.join(output, 'llms.txt'), directory);
+
+  const fulltext = [`# 重新组织 · 第一季：完整文章
+
+> AI 时代的分工、权力与人的价值。LeenMa 著。
+
+本文件从十二篇公开原文自动生成，保留正文、图解文字说明与参考来源。为便于连续阅读，移除单篇 YAML 元数据、调整标题层级，并将相对链接转换为完整地址。
+
+原创文章与图解采用 [CC BY 4.0](${url('LICENSE')})。引用时请保留作者署名与对应文章链接。
+
+[系列目录](${url('llms.txt')}) · [结构化目录](${url('ai-index.json')})
+`];
+  for (const [i, chapter] of chapters.entries()) {
+    const article = articles[i];
+    let body = fs.readFileSync(path.join(repo, 'articles', chapter.file), 'utf8')
+      .replace(/^---\n[\s\S]*?\n---\n/, '').trim().replace(/^# .+\n+/, '');
+    body = body.replace(/^(#{1,5}) /gm, '#$1 ');
+    body = body.replace(/(!?\[[^\]\n]*\]\()([^)\n]+)(\))/g, (match, prefix, href, suffix) => {
+      const target = href === '../README.md' ? url('llms.txt') : new URL(href, article.markdown_url).href;
+      return prefix + target + suffix;
+    });
+    fulltext.push(`---\n\n## ${number(article.order)} · ${article.title}\n\n[单篇原文](${article.markdown_url}) · [网页阅读](${article.reading_url})\n\n${body}\n`);
+  }
+  fs.writeFileSync(path.join(output, 'llms-full.txt'), fulltext.join('\n'));
+}
