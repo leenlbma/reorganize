@@ -22,15 +22,24 @@ if (![17,19,21,23].includes(fontSize)) fontSize = 19;
 let ticking = false, lastSaved = 0, rendering = false, savedToast;
 let lastRoute = null;
 const main = $('#main');
+// Static article pages (read/NN/) live below the site root; they carry data-root and data-article.
+const root = document.body.dataset.root || '';
+const staticArticle = Number(document.body.dataset.article) || null;
+const siteURL = new URL(root || './', location.href).href.replace(/#.*$/, '');
+const articleURL = id => new URL(`read/${number(id)}/`, siteURL).href;
 $('.skip-link').addEventListener('click',event=>{event.preventDefault();main.focus();main.scrollIntoView({behavior:'instant'});});
 // Save before navigation: native fragment scrolling can otherwise reset the old page first.
 document.addEventListener('click',event=>{
-  const link=event.target.closest('a[href^="#/"]');
+  const link=event.target.closest('a[href]');
   if(!link||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  const raw=link.getAttribute('href'), match=raw.match(/^(?:\.\.\/\.\.\/|\.\/)?(#\/.*)$/);
+  const staticRead=raw.match(/^\.\.\/\.\.\/read\/(\d+)\/$/);
+  if(!match&&!staticRead)return;
   event.preventDefault();
   if(current){updateProgress();storage.set('reorganize-reading-v1',reading);}
-  const href=link.getAttribute('href');
-  if(location.hash!==href)history.pushState(null,'',href);
+  const href=match?match[1]:`#/read/${Number(staticRead[1])}`;
+  // From a static page the reading app keeps running at the site root, so old #/ links and progress keep working.
+  if(staticArticle||location.hash!==href)history.pushState(null,'',(staticArticle?siteURL:'')+href);
   route(true);
 });
 
@@ -45,6 +54,7 @@ setTheme(theme);
 document.documentElement.style.setProperty('--article-size', fontSize+'px');
 $('#theme-button').addEventListener('click',()=>setTheme(theme === 'light' ? 'dark' : 'light'));
 $('#about-button').addEventListener('click',()=>$('#about-dialog').showModal());
+
 $('#image-close').addEventListener('click',()=>$('#image-dialog').close());
 $('#mobile-menu-button').addEventListener('click',()=>{
   $('#mobile-navigation').innerHTML = current ? `<div class="eyebrow">本篇目录 · ${number(current.id)}</div><div class="mobile-toc">${tocLinks(current)}</div><hr><div class="eyebrow">全部文章</div>${chapterLinks(current.id)}` : `<div class="eyebrow">全部文章 · 12 篇</div>${chapterLinks()}`;
@@ -109,14 +119,14 @@ function tocLinks(chapter){
 function concept(chapter){
   const img=chapter.images[0];
   if(!img)return '';
-  return `<figure class="reading-figure" id="concept"><span id="gallery" class="section-anchor" aria-hidden="true"></span><button data-image="0" aria-label="放大图解：${esc(img.alt)}"><img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}"></button><figcaption>${esc(img.alt)} <span aria-hidden="true">↗</span></figcaption><p class="sr-only">${esc(img.description)}</p></figure>`;
+  return `<figure class="reading-figure" id="concept"><span id="gallery" class="section-anchor" aria-hidden="true"></span><button data-image="0" aria-label="放大图解：${esc(img.alt)}"><img src="${root}${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}"></button><figcaption>${esc(img.alt)} <span aria-hidden="true">↗</span></figcaption><p class="sr-only">${esc(img.description)}</p></figure>`;
 }
 
 function renderReader(chapter, anchor){
   current=chapter;
   document.title=`${number(chapter.id)} · ${chapter.title} — 重新组织`;
   const previous=chapters[chapter.id-2], next=chapters[chapter.id];
-  main.innerHTML=`<div class="reader-layout"><aside class="chapter-sidebar" aria-label="系列文章"><a href="#/catalog" class="sidebar-home">← 返回系列总览</a><div class="eyebrow">第一季 · 12 篇</div>${chapterLinks(chapter.id)}</aside><article class="article-center"><div class="article-inner"><header><div class="article-kicker"><span><span class="kicker-number">${number(chapter.id)}</span> / 12</span><span>PART 0${chapter.part+1} · ${parts[chapter.part]}</span></div><h1 class="article-title">${esc(chapter.title)}</h1><div class="article-meta"><span>LeenMa</span><span>约 ${chapter.readingMinutes} 分钟</span></div></header><nav class="reading-toolbar" aria-label="阅读设置"><span class="tool-label">${esc(chapter.tag)}</span><button id="open-toc">本篇目录 ↓</button><a href="#/read/${chapter.id}/concept">图解 ↓</a><button id="font-smaller" class="font-button" aria-label="缩小正文字号" ${fontSize<=17?'disabled':''}>A−</button><button id="font-larger" class="font-button" aria-label="放大正文字号" ${fontSize>=23?'disabled':''}>A＋</button><button id="copy-link">复制链接</button></nav>${concept(chapter)}<div class="prose" id="article-body">${chapter.html}</div><div class="end-marker" id="article-end">第 ${number(chapter.id)} 篇 · 正文完</div><div class="article-download" id="sources"><a href="articles/${chapter.file}" download>下载 Markdown ↓</a></div><nav class="next-reading" aria-label="前后篇文章">${previous?`<a href="#/read/${previous.id}"><span>← 上一篇 · ${number(previous.id)}</span>${esc(previous.title)}</a>`:'<a href="#/catalog"><span>← 返回</span>系列总览</a>'}${next?`<a href="#/read/${next.id}"><span>下一篇 · ${number(next.id)} →</span>${esc(next.title)}</a>`:'<a href="#/catalog"><span>第一季 · 完 →</span>回到十二个问题</a>'}</nav></div></article><aside class="toc-sidebar" aria-label="本篇章节"><div class="toc-title">ON THIS PAGE / 本篇目录</div>${tocLinks(chapter)}<div class="toc-progress"><span>正文阅读进度</span><span id="percent">0%</span></div></aside></div>`;
+  main.innerHTML=`<div class="reader-layout"><aside class="chapter-sidebar" aria-label="系列文章"><a href="#/catalog" class="sidebar-home">← 返回系列总览</a><div class="eyebrow">第一季 · 12 篇</div>${chapterLinks(chapter.id)}</aside><article class="article-center"><div class="article-inner"><header><div class="article-kicker"><span><span class="kicker-number">${number(chapter.id)}</span> / 12</span><span>PART 0${chapter.part+1} · ${parts[chapter.part]}</span></div><h1 class="article-title">${esc(chapter.title)}</h1><div class="article-meta"><span>LeenMa</span><span>约 ${chapter.readingMinutes} 分钟</span></div></header><nav class="reading-toolbar" aria-label="阅读设置"><span class="tool-label">${esc(chapter.tag)}</span><button id="open-toc">本篇目录 ↓</button><a href="#/read/${chapter.id}/concept">图解 ↓</a><button id="font-smaller" class="font-button" aria-label="缩小正文字号" ${fontSize<=17?'disabled':''}>A−</button><button id="font-larger" class="font-button" aria-label="放大正文字号" ${fontSize>=23?'disabled':''}>A＋</button><button id="copy-link">复制链接</button></nav>${concept(chapter)}<div class="prose" id="article-body">${chapter.html}</div><div class="end-marker" id="article-end">第 ${number(chapter.id)} 篇 · 正文完</div><div class="article-download" id="sources"><a href="${root}articles/${chapter.file}" download>下载 Markdown ↓</a></div><nav class="next-reading" aria-label="前后篇文章">${previous?`<a href="#/read/${previous.id}"><span>← 上一篇 · ${number(previous.id)}</span>${esc(previous.title)}</a>`:'<a href="#/catalog"><span>← 返回</span>系列总览</a>'}${next?`<a href="#/read/${next.id}"><span>下一篇 · ${number(next.id)} →</span>${esc(next.title)}</a>`:'<a href="#/catalog"><span>第一季 · 完 →</span>回到十二个问题</a>'}</nav></div></article><aside class="toc-sidebar" aria-label="本篇章节"><div class="toc-title">ON THIS PAGE / 本篇目录</div>${tocLinks(chapter)}<div class="toc-progress"><span>正文阅读进度</span><span id="percent">0%</span></div></aside></div>`;
   $('#open-toc').addEventListener('click',()=>{
     $('#mobile-navigation').innerHTML=`<div class="eyebrow">第 ${number(chapter.id)} 篇 · 本篇目录</div><div class="mobile-toc">${tocLinks(chapter)}</div>`;
     $('#navigation-dialog').showModal();
@@ -124,13 +134,13 @@ function renderReader(chapter, anchor){
   $('#font-smaller').addEventListener('click',()=>changeFont(-2));
   $('#font-larger').addEventListener('click',()=>changeFont(2));
   $('#copy-link').addEventListener('click',async()=>{
-    try{await navigator.clipboard.writeText(location.href);toast('阅读链接已复制');}
+    try{await navigator.clipboard.writeText(articleURL(chapter.id)+(location.hash.split('/')[3]?'#'+location.hash.split('/')[3]:''));toast('阅读链接已复制');}
     catch{toast('暂时无法复制，请从浏览器地址栏复制链接');}
   });
   document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{
     const img=chapter.images[Number(button.dataset.image)];
-    $('#image-full').src=img.src;$('#image-full').alt=img.alt;
-    $('#image-caption').textContent=img.alt;$('#image-original').href=img.src;
+    $('#image-full').src=root+img.src;$('#image-full').alt=img.alt;
+    $('#image-caption').textContent=img.alt;$('#image-original').href=root+img.src;
     $('#image-dialog').showModal();$('.image-viewport').scrollTop=0;
   }));
   $('.sidebar-link.active')?.scrollIntoView({block:'nearest',behavior:'instant'});
@@ -181,7 +191,8 @@ function updateProgress(persist=true){
 function route(force=false){
   if(!force&&lastRoute===location.hash)return;
   lastRoute=location.hash;
-  const segments=location.hash.slice(1).split('/').filter(Boolean);
+  let segments=location.hash.slice(1).split('/').filter(Boolean);
+  if(staticArticle&&!segments.length)segments=['read',String(staticArticle)];
   const id=Number(segments[1]);
   if(segments[0]==='read'&&current?.id===id){jumpTo(segments[2]);updateProgress();return;}
   rendering=true;
@@ -205,7 +216,20 @@ window.addEventListener('pagehide',()=>{updateProgress();storage.set('reorganize
 window.addEventListener('hashchange',()=>route());
 window.addEventListener('popstate',()=>route());
 if('scrollRestoration' in history)history.scrollRestoration='manual';
-fetch('content.json').then(response=>{if(!response.ok)throw new Error('content unavailable');return response.json();}).then(articles=>{chapters=articles;route();}).catch(()=>{
+fetch(root+'content.json').then(response=>{if(!response.ok)throw new Error('content unavailable');return response.json();}).then(articles=>{
+  chapters=articles;
+  const staticHash=location.hash.startsWith('#/');
+  if(staticArticle&&!staticHash){
+    // Take over the server-rendered article in place; the URL stays the shareable article address.
+    const chapter=chapters.find(c=>c.id===staticArticle);
+    lastRoute=location.hash;rendering=true;
+    const anchor=decodeURIComponent(location.hash.slice(1));
+    renderReader(chapter,anchor&&document.getElementById(anchor)?anchor:undefined);
+  }else{
+    if(staticArticle)history.replaceState(null,'',siteURL+location.hash);
+    route();
+  }
+}).catch(()=>{
   main.innerHTML='<div class="loading"><h1>文章暂时未能加载</h1><p>请刷新页面重试。</p><button class="primary-button" id="reload">重新加载 ↻</button></div>';
   $('#reload').addEventListener('click',()=>location.reload());
 });

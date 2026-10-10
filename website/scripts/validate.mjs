@@ -98,7 +98,7 @@ for (const [i, article] of ai.articles.entries()) {
 for (const document of [directory, fulltext]) {
   for (const [, href] of document.matchAll(/!?\[[^\]\n]*\]\(([^)\n]+)\)/g)) checkAIURL(href);
 }
-const allowedOutput = new Set(['.nojekyll', 'articles', 'images', 'content.json', 'index.html', 'app.js', 'styles.css', 'favicon.svg', 'og-cover.png', 'CONTENT-LICENSE.txt', 'LICENSE', 'LICENSE-CODE', 'ai.html', 'ai.css', 'ai.js', 'llms.txt', 'llms-full.txt', 'ai-index.json']);
+const allowedOutput = new Set(['read', 'sitemap.xml', 'robots.txt', 'feed.xml', '.nojekyll', 'articles', 'images', 'content.json', 'index.html', 'app.js', 'styles.css', 'favicon.svg', 'og-cover.png', 'CONTENT-LICENSE.txt', 'LICENSE', 'LICENSE-CODE', 'ai.html', 'ai.css', 'ai.js', 'llms.txt', 'llms-full.txt', 'ai-index.json']);
 for (const item of fs.readdirSync(output)) assert.ok(allowedOutput.has(item), `Unexpected output: ${item}`);
 assert.ok(fs.existsSync(path.join(output, '.nojekyll')));
 assert.equal(fs.readFileSync(path.join(output, 'LICENSE'), 'utf8'), fs.readFileSync(path.join(repo, 'LICENSE'), 'utf8'));
@@ -117,4 +117,54 @@ assert.ok(fs.readFileSync(path.join(repo, 'LICENSE'), 'utf8').startsWith('Attrib
 for (const file of ['README.md', 'NOTICE.md', 'llms.txt', 'website/src/app.js', 'website/src/ai.html', 'website/scripts/build-ai.mjs', ...data.map(a => `articles/${a.file}`)]) {
   assert.ok(!/BY-SA|ShareAlike|相同方式/i.test(fs.readFileSync(path.join(repo, file), 'utf8')), `Stale license text: ${file}`);
 }
-console.log(`PASS: 12 complete articles, ${data.reduce((n, a) => n + a.headings.length, 0)} headings, 12 diagrams, downloads, licenses, ${links} Markdown links and complete AI reading exports.`);
+
+// Standalone article pages, sitemap, robots and feed.
+const pageIndex = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
+assert.ok(pageIndex.includes('<link rel="alternate" type="application/atom+xml" href="feed.xml"'), 'Home page must advertise the Atom feed');
+assert.equal(fs.readdirSync(path.join(output, 'read')).length, 12);
+const decode = s => s.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+for (const article of data) {
+  const id = String(article.id).padStart(2, '0');
+  const pageURL = `${site_url}read/${id}/`;
+  const html = fs.readFileSync(path.join(output, 'read', id, 'index.html'), 'utf8');
+  const meta = (attr, key) => decode(html.match(new RegExp(`<meta ${attr}="${key}" content="([^"]*)"`))?.[1] || '');
+  assert.ok(html.includes(`<link rel="canonical" href="${pageURL}">`), `Wrong canonical: ${id}`);
+  assert.equal((html.match(/<link rel="canonical"/g) || []).length, 1, `Duplicate canonical: ${id}`);
+  assert.equal(meta('property', 'og:url'), pageURL);
+  assert.equal(meta('property', 'og:type'), 'article');
+  assert.ok(meta('property', 'og:title').includes(article.title), `og:title missing title: ${id}`);
+  assert.equal(meta('property', 'og:image'), site_url + 'og-cover.png');
+  assert.equal(meta('name', 'twitter:card'), 'summary_large_image');
+  assert.equal(meta('name', 'twitter:title'), meta('property', 'og:title'));
+  assert.ok(meta('name', 'description').length > 20 && meta('name', 'description') === meta('property', 'og:description'), `Bad description: ${id}`);
+  assert.equal((html.match(/<title>/g) || []).length, 1);
+  assert.ok(text(html.match(/<div class="prose"[\s\S]*?<div class="end-marker"/)[0]).includes(text(article.html).slice(0, 400)), `Static body missing: ${id}`);
+  assert.ok(html.includes('data-article="' + article.id + '"') && html.includes('data-root="../../"'));
+  assert.ok(html.includes('href="../../#/catalog"'), `Missing catalog link: ${id}`);
+  if (article.id > 1) assert.ok(html.includes(`href="../../read/${String(article.id - 1).padStart(2, '0')}/" rel="prev"`), `Missing previous: ${id}`);
+  if (article.id < 12) assert.ok(html.includes(`href="../../read/${String(article.id + 1).padStart(2, '0')}/" rel="next"`), `Missing next: ${id}`);
+  assert.ok(!/href="#\/read/.test(html), `Legacy hash link left in static page: ${id}`);
+  for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
+    assert.ok(!url.startsWith('/'), `Root-relative asset: ${id} -> ${url}`);
+    if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, 'read', id, url.split('#')[0])), `Missing asset on static page ${id}: ${url}`);
+  }
+}
+const sitemap = fs.readFileSync(path.join(output, 'sitemap.xml'), 'utf8');
+const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+assert.equal(locs.length, 13, 'sitemap must list home and 12 articles');
+assert.equal(new Set(locs).size, 13);
+assert.deepEqual(locs, [site_url, ...data.map(a => `${site_url}read/${String(a.id).padStart(2, '0')}/`)]);
+const robots = fs.readFileSync(path.join(output, 'robots.txt'), 'utf8');
+assert.ok(/User-agent: \*\nAllow: \//.test(robots) && !/Disallow: \//.test(robots) && robots.includes(`Sitemap: ${site_url}sitemap.xml`));
+const feed = fs.readFileSync(path.join(output, 'feed.xml'), 'utf8');
+assert.ok(feed.includes('xmlns="http://www.w3.org/2005/Atom"'));
+const entries = feed.split('<entry>').slice(1);
+assert.equal(entries.length, 12);
+for (const [i, entry] of entries.entries()) {
+  const link = `${site_url}read/${String(data[i].id).padStart(2, '0')}/`;
+  assert.ok(entry.includes(`<id>${link}</id>`) && entry.includes(`href="${link}"`), `Feed link: ${i + 1}`);
+  assert.ok(entry.includes(data[i].title.replace(/&/g, '&amp;')), `Feed title: ${i + 1}`);
+  assert.ok(/<summary>[^<]{20,}<\/summary>/.test(entry), `Feed summary: ${i + 1}`);
+  assert.ok(!entry.includes('<published>') || /<published>\d{4}-\d\d-\d\dT[^<]+<\/published>/.test(entry));
+}
+console.log(`PASS: 12 complete articles, ${data.reduce((n, a) => n + a.headings.length, 0)} headings, 12 diagrams, downloads, licenses, ${links} Markdown links complete AI reading exports, 12 standalone article pages, sitemap, robots and Atom feed.`);

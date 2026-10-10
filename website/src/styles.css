@@ -36,3 +36,8 @@ dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);pad
 .prose #references{font-size:1.05em}
 .prose #references+ul{font-size:.85em;line-height:1.8}
 @media(max-width:720px){.reading-figure{margin:24px 0 30px}.prose th,.prose td{padding:10px;min-width:120px}}
+
+/* Static article pages. */
+.static-reader{display:block}
+.static-back{font-size:13px;margin:30px 0 0}
+.static-back a{color:var(--muted);text-decoration:underline;text-underline-offset:4px;display:inline-block;padding:10px 0}

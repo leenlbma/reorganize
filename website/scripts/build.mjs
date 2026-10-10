@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { marked } from './vendor/marked.mjs';
 import { buildAI } from './build-ai.mjs';
+import { buildPages } from './build-pages.mjs';
 
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const repo = path.dirname(site);
@@ -27,10 +28,12 @@ fs.writeFileSync(path.join(output, '.nojekyll'), '');
 
 const escape = s => s.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 const plain = s => s.replace(/<[^>]+>/g, '').replace(/\*\*/g, '');
+const bodies = [];
 for (const chapter of chapters) {
   const source = fs.readFileSync(path.join(repo, 'articles', chapter.file), 'utf8');
   const body = source.replace(/^---\n[\s\S]*?\n---\n/, '').split('\n---\n\n## 图解')[0]
     .trim().replace(/^# .+\n+/, '').replace(/^\*\*《重新组织》[^\n]+\n+/, '');
+  bodies.push(body);
   const headings = [], sections = anchors[chapter.file], subheadingCounts = [];
   for (const token of marked.lexer(body)) {
     if (token.type !== 'heading') continue;
@@ -77,6 +80,7 @@ for (const chapter of chapters) {
   chapter.sourceHash = createHash('sha256').update(source).digest('hex');
   fs.copyFileSync(path.join(repo, 'articles', chapter.file), path.join(output, 'articles', chapter.file));
 }
+buildPages({repo, output, chapters, bodies});
 fs.writeFileSync(path.join(output, 'content.json'), JSON.stringify(chapters));
 buildAI({repo, output, chapters});
-console.log(`Built ${chapters.length} articles, ${chapters.length} diagrams and AI reading files.`);
+console.log(`Built ${chapters.length} articles, ${chapters.length} diagrams, ${chapters.length} static article pages, sitemap, robots, feed and AI reading files.`);

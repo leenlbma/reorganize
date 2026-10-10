@@ -76,6 +76,8 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory website/dist
 
 修改正文后重新构建，网页与 Markdown 下载会一起更新。修改标题层级时，同时核对章节链接。图解可使用 `python3 website/scripts/generate-diagrams.py` 重新生成；修改图解时同步修改生成程序。
 
+构建同时生成 `read/01/` 到 `read/12/` 十二个独立文章页（含正文、分享标签和上下篇链接）、`sitemap.xml`、`robots.txt` 和 Atom 订阅 `feed.xml`。文章日期取自各篇 Markdown 的 Git 提交历史，所以部署时需要完整历史（工作流已设置 `fetch-depth: 0`）。旧的 `#/read/N` 链接继续有效。
+
 GitHub Pages 的发布源选择 **GitHub Actions**。推送到 `main` 后，工作流先构建并检查，再部署 `website/dist/`；PR 只检查。项目子路径与章节刷新使用同一套相对资源地址，不需要后端或路径重写。
 
 这些文章也发布在我的小红书：[LeenMa 的小红书主页](https://www.xiaohongshu.com/user/profile/5b4a2a3df7e8b94fcb3a2d6b)。欢迎在那里阅读、交流。
