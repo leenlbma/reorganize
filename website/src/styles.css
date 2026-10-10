@@ -73,3 +73,5 @@ dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);pad
 }
 @media(max-width:380px){.header-actions .ai-entry{padding:0 6px}}
 @media(max-width:760px){.brand{min-height:44px}.text-link{display:inline-flex;align-items:center;min-height:44px;padding-bottom:0}.article-download a,.static-back a{display:inline-flex;align-items:center;min-height:44px}.image-toolbar a{min-height:44px;display:inline-flex;align-items:center}}
+
+.site-footer .footer-contact{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:6px 18px}.site-footer .footer-contact a{display:inline-block;padding:8px 0}@media(max-width:760px){.site-footer .footer-contact{justify-content:flex-start;gap:4px 16px}}
