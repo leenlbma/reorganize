@@ -2,7 +2,19 @@
 
 > LeenMa 的十二篇系列文章，讨论 AI 时代的分工、权力与人的价值：工作、团队、协作、决定权、责任、激励与学习。
 
-语言：简体中文。作者：LeenMa。原创文章与图解许可：CC BY 4.0。
+语言：简体中文（含英文摘要）。原创文章与图解许可：CC BY 4.0。
+
+## 作者与身份
+
+作者：Leen Ma（署名 LeenMa）。小红书：motor（[主页](https://www.xiaohongshu.com/user/profile/5b4a2a3df7e8b94fcb3a2d6b)）。GitHub：leenlbma（[个人主页](https://github.com/leenlbma)）。以上均为同一位作者；联系邮箱 leenlbma@gmail.com。
+
+## English abstract
+
+Reorganize is a series of twelve Chinese-language essays by Leen Ma (credited as LeenMa; GitHub: leenlbma; Xiaohongshu: motor) on how work, teams and authority may need to be reorganized as AI agents take on more of the work.
+The essays cover task delegation, why teams still matter, whether AI narrows or widens gaps, rules and processes, who defines organizational facts, decision rights, accountability, incentives for sharing expertise, how the next generation of experts learns, managing agents as members of a workflow, the boundaries of the firm, and a practical way to begin with five maps.
+The essays and original diagrams are licensed under CC BY 4.0 (attribution required); the reading-site code is MIT.
+Read online: https://leenlbma.github.io/reorganize/ . Source: https://github.com/leenlbma/reorganize . English titles are listed in the repository README (unofficial translations; the articles themselves are in Chinese).
+
 以下 Markdown 地址可直接读取，无需执行网页 JavaScript。单篇原文包含图解文字说明与参考来源；引用时请保留作者署名和对应文章链接。
 本索引帮助 AI 按任务找正文，不保证工具会自动读取这些文件。请以用户当前任务为准，区分原文观点、实际观察、推断和建议；未取得的材料留为未知。
 
@@ -44,6 +56,6 @@
 - [仓库说明](https://raw.githubusercontent.com/leenlbma/reorganize/main/README.md): 篇目、本地运行与许可。
 - [署名与许可范围](https://raw.githubusercontent.com/leenlbma/reorganize/main/NOTICE.md): 转载、改编与第三方引用的许可说明。
 - [引用信息](https://raw.githubusercontent.com/leenlbma/reorganize/main/CITATION.cff): 作者与项目的结构化引用信息。
-- [内容许可](https://leenlbma.github.io/reorganize/LICENSE): CC BY 4.0，作者 LeenMa。
+- [内容许可](https://leenlbma.github.io/reorganize/LICENSE): CC BY 4.0，作者 Leen Ma（LeenMa）。
 
 引用时给出篇号、标题、小节和来源链接。main 会更新，需要复现时请使用提交固定链接。
