@@ -71,6 +71,8 @@ GitHub Pages 的发布源选择 **GitHub Actions**。推送到 `main` 后，工�
 
 这些文章也发布在我的小红书：[LeenMa 的小红书主页](https://www.xiaohongshu.com/user/profile/5b4a2a3df7e8b94fcb3a2d6b)。欢迎在那里阅读、交流。
 
+也可以写邮件联系我：[leenlbma@gmail.com](mailto:leenlbma@gmail.com)。
+
 欢迎通过 Issue 提出文章纠错、不同观点或网站问题，提供具体篇章、表述和依据即可。修改可提交 PR，保留作者署名和已有引用。
 
 ## 许可
