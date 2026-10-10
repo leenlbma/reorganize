@@ -167,6 +167,11 @@ for (const [i, entry] of entries.entries()) {
   assert.ok(/<summary>[^<]{20,}<\/summary>/.test(entry), `Feed summary: ${i + 1}`);
   assert.ok(!entry.includes('<published>') || /<published>\d{4}-\d\d-\d\dT[^<]+<\/published>/.test(entry));
 }
+const homeSource = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
+assert.ok(homeSource.includes('class="static-home"'), 'Home static fallback missing');
+assert.equal(new Set([...homeSource.matchAll(/href="read\/(\d\d)\/"/g)].map(m => m[1])).size, 12, 'Home must link all 12 article pages');
+assert.ok(homeSource.includes("classList.add('js')") && homeSource.includes('html.js .static-home{display:none}html.js .static-reader{visibility:hidden}'), 'Home js class / static fallback hiding missing');
+assert.ok(homeSource.indexOf("classList.add('js')") < homeSource.indexOf('styles.css'), 'Early js/theme script must precede stylesheet');
 const umamiTag = '<script defer src="https://cloud.umami.is/script.js" data-website-id="8ba58f50-24d2-4d61-a09c-1aa3558a4ade"></script>';
 for (const rel of ['index.html', 'ai.html', ...data.map(a => `read/${String(a.id).padStart(2, '0')}/index.html`)]) {
   const html = fs.readFileSync(path.join(output, rel), 'utf8');
