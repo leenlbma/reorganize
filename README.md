@@ -80,6 +80,8 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory website/dist
 
 GitHub Pages 的发布源选择 **GitHub Actions**。推送到 `main` 后，工作流先构建并检查，再部署 `website/dist/`；PR 只检查。项目子路径与章节刷新使用同一套相对资源地址，不需要后端或路径重写。
 
+站点使用 Umami Cloud 做不带 cookie 的访问统计（仅页面访问，无个人信息）。
+
 这些文章也发布在我的小红书：[LeenMa 的小红书主页](https://www.xiaohongshu.com/user/profile/5b4a2a3df7e8b94fcb3a2d6b)。欢迎在那里阅读、交流。
 
 也可以写邮件联系我：[leenlbma@gmail.com](mailto:leenlbma@gmail.com)。

@@ -167,4 +167,10 @@ for (const [i, entry] of entries.entries()) {
   assert.ok(/<summary>[^<]{20,}<\/summary>/.test(entry), `Feed summary: ${i + 1}`);
   assert.ok(!entry.includes('<published>') || /<published>\d{4}-\d\d-\d\dT[^<]+<\/published>/.test(entry));
 }
+const umamiTag = '<script defer src="https://cloud.umami.is/script.js" data-website-id="8ba58f50-24d2-4d61-a09c-1aa3558a4ade"></script>';
+for (const rel of ['index.html', 'ai.html', ...data.map(a => `read/${String(a.id).padStart(2, '0')}/index.html`)]) {
+  const html = fs.readFileSync(path.join(output, rel), 'utf8');
+  assert.ok(html.includes(umamiTag), `Missing Umami script: ${rel}`);
+  assert.equal([...html.matchAll(/data-website-id="([^"]+)"/g)].map(m => m[1]).join(), '8ba58f50-24d2-4d61-a09c-1aa3558a4ade', `Umami website id mismatch: ${rel}`);
+}
 console.log(`PASS: 12 complete articles, ${data.reduce((n, a) => n + a.headings.length, 0)} headings, 12 diagrams, downloads, licenses, ${links} Markdown links complete AI reading exports, 12 standalone article pages, sitemap, robots and Atom feed.`);
