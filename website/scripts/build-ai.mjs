@@ -95,7 +95,7 @@ ${articles.map(article => `- [${number(article.order)} · ${article.title}](${ar
 
   const fulltext = [`# 重新组织 · 第一季：完整文章
 
-> AI 时代的分工、权力与人的价值。LeenMa 著。
+> AI 时代的分工、权力与人的价值。作者：Leen Ma（署名 LeenMa；小红书：motor；GitHub：leenlbma，均为同一人）。身份与联系方式见 [llms.txt](https://leenlbma.github.io/reorganize/llms.txt) 的「作者与身份」一节。
 
 本文件从十二篇公开原文自动生成，保留正文、图解文字说明与参考来源。为便于连续阅读，移除单篇 YAML 元数据、调整标题层级，并将相对链接转换为完整地址。
 

@@ -84,6 +84,14 @@ buildPages({repo, output, chapters, bodies});
 fs.writeFileSync(path.join(output, 'content.json'), JSON.stringify(chapters));
 buildAI({repo, output, chapters});
 
+// Static home content for crawlers and no-JS readers; the reading app replaces it on load.
+const partNames = ['重新解释团队', '重建协作机制', '重新分配价值', '重新开始'];
+const homeHtml = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
+const esc = t => t.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+const staticHome = `<main id="main" tabindex="-1"><div class="static-home"><h1>重新组织</h1><p class="static-subtitle">AI 时代的分工、权力与人的价值</p><p>Leen Ma（署名 LeenMa）的十二篇系列文章，讨论 AI 如何改变工作、团队、协作、决定权、责任、激励和学习。文章与图解采用 CC BY 4.0。</p><p><a href="read/01/">从第一篇开始阅读</a> · <a href="llms.txt">AI 阅读目录</a> · <a href="feed.xml">Atom 订阅</a> · <a href="https://github.com/leenlbma/reorganize">GitHub 仓库</a></p><h2>十二篇文章</h2><ol class="static-list">${chapters.map(c => `<li><a href="read/${String(c.id).padStart(2, '0')}/">${esc(c.title)}</a> <small>${esc(c.tag)}</small></li>`).join('')}</ol></div></main>`;
+if (!homeHtml.includes('<main id="main" tabindex="-1"><div class="loading">正在打开《重新组织》…</div></main>')) throw new Error('Home placeholder not found');
+fs.writeFileSync(path.join(output, 'index.html'), homeHtml.replace('<main id="main" tabindex="-1"><div class="loading">正在打开《重新组织》…</div></main>', staticHome));
+
 // Cache-bust scripts and styles so readers always get the current build.
 const assetHash = name => createHash('sha256').update(fs.readFileSync(path.join(output, name))).digest('hex').slice(0, 10);
 const versions = Object.fromEntries(['app.js', 'ai.js', 'styles.css', 'ai.css'].map(n => [n, assetHash(n)]));

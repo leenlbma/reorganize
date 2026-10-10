@@ -92,4 +92,4 @@ GitHub Pages 的发布源选择 **GitHub Actions**。推送到 `main` 后，工�
 
 AI 读者可从 [llms.txt](llms.txt) 按任务找到各篇原文。引用请参考 [CITATION.cff](CITATION.cff)。
 
-作者：**LeenMa**。
+作者：**Leen Ma**（署名 LeenMa）。小红书：motor，GitHub：leenlbma，均为同一人。联系：[leenlbma@gmail.com](mailto:leenlbma@gmail.com)。
