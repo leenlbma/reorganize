@@ -14,7 +14,6 @@ themeButton.addEventListener('click', () => {
 });
 
 const directoryLink = document.getElementById('ai-directory-link');
-directoryLink.textContent = directoryLink.href;
 const copyButton = document.getElementById('copy-ai-link');
 copyButton.hidden = false;
 copyButton.addEventListener('click', async () => {
