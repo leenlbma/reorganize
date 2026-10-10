@@ -83,4 +83,19 @@ for (const chapter of chapters) {
 buildPages({repo, output, chapters, bodies});
 fs.writeFileSync(path.join(output, 'content.json'), JSON.stringify(chapters));
 buildAI({repo, output, chapters});
+
+// Cache-bust scripts and styles so readers always get the current build.
+const assetHash = name => createHash('sha256').update(fs.readFileSync(path.join(output, name))).digest('hex').slice(0, 10);
+const versions = Object.fromEntries(['app.js', 'ai.js', 'styles.css', 'ai.css'].map(n => [n, assetHash(n)]));
+const stampHtml = dir => {
+  for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) stampHtml(full);
+    else if (entry.name.endsWith('.html')) {
+      const html = fs.readFileSync(full, 'utf8').replace(/((?:href|src)="[^"?]*?\b(app\.js|ai\.js|styles\.css|ai\.css))"/g, (m, a, n) => `${a}?v=${versions[n]}"`);
+      fs.writeFileSync(full, html);
+    }
+  }
+};
+stampHtml(output);
 console.log(`Built ${chapters.length} articles, ${chapters.length} diagrams, ${chapters.length} static article pages, sitemap, robots, feed and AI reading files.`);

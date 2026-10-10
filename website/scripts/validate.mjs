@@ -59,7 +59,7 @@ for (const file of ['index.html', 'ai.html']) {
   const html = fs.readFileSync(path.join(output, file), 'utf8');
   for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     assert.ok(!url.startsWith('/'), `Root-relative asset: ${file} -> ${url}`);
-    if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, url)), `Missing entry asset: ${file} -> ${url}`);
+    if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, url.split('?')[0])), `Missing entry asset: ${file} -> ${url}`);
   }
 }
 const ai = JSON.parse(fs.readFileSync(path.join(output, 'ai-index.json'), 'utf8'));
