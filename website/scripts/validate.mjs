@@ -165,7 +165,9 @@ for (const [i, entry] of entries.entries()) {
   assert.ok(entry.includes(`<id>${link}</id>`) && entry.includes(`href="${link}"`), `Feed link: ${i + 1}`);
   assert.ok(entry.includes(data[i].title.replace(/&/g, '&amp;')), `Feed title: ${i + 1}`);
   assert.ok(/<summary>[^<]{20,}<\/summary>/.test(entry), `Feed summary: ${i + 1}`);
-  assert.ok(!entry.includes('<published>') || /<published>\d{4}-\d\d-\d\dT[^<]+<\/published>/.test(entry));
+  assert.ok(entry.includes('<published>2026-09-01T00:00:00+08:00</published>'), `Feed date: ${i + 1}`);
+  const pg = fs.readFileSync(path.join(output, 'read', String(data[i].id).padStart(2, '0'), 'index.html'), 'utf8');
+  assert.ok(pg.includes('<span>2026 年 9 月</span>') && pg.includes('"datePublished":"2026-09"'), `Page date: ${i + 1}`);
 }
 const homeSource = fs.readFileSync(path.join(output, 'index.html'), 'utf8');
 assert.ok(homeSource.includes('class="static-home"'), 'Home static fallback missing');
