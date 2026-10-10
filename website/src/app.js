@@ -55,9 +55,9 @@ document.documentElement.style.setProperty('--article-size', fontSize+'px');
 $('#theme-button').addEventListener('click',()=>setTheme(theme === 'light' ? 'dark' : 'light'));
 $('#about-button').addEventListener('click',()=>$('#about-dialog').showModal());
 
-$('#image-close').addEventListener('click',()=>$('#image-dialog').close());
 $('#mobile-menu-button').addEventListener('click',()=>{
-  $('#mobile-navigation').innerHTML = current ? `<div class="eyebrow">本篇目录 · ${number(current.id)}</div><div class="mobile-toc">${tocLinks(current)}</div><hr><div class="eyebrow">全部文章</div>${chapterLinks(current.id)}` : `<div class="eyebrow">全部文章 · 12 篇</div>${chapterLinks()}`;
+  $('#mobile-navigation').innerHTML = `<div class="menu-links"><a href="#/catalog">全部文章</a><a href="#/maps">五张地图</a><button type="button" id="menu-about">关于</button><a href="${root}ai.html">AI 入口</a></div>` + (current ? `<div class="eyebrow">本篇目录 · ${number(current.id)}</div><div class="mobile-toc">${tocLinks(current)}</div><hr><div class="eyebrow">全部文章</div>${chapterLinks(current.id)}` : `<div class="eyebrow">全部文章 · 12 篇</div>${chapterLinks()}`);
+  $('#menu-about').addEventListener('click',()=>{$('#navigation-dialog').close();$('#about-dialog').showModal();});
   $('#navigation-dialog').showModal();
 });
 $('#navigation-dialog').addEventListener('click', event=>{if(event.target.closest('a'))$('#navigation-dialog').close();});
@@ -119,7 +119,7 @@ function tocLinks(chapter){
 function concept(chapter){
   const img=chapter.images[0];
   if(!img)return '';
-  return `<figure class="reading-figure" id="concept"><span id="gallery" class="section-anchor" aria-hidden="true"></span><button data-image="0" aria-label="放大图解：${esc(img.alt)}"><img src="${root}${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}"></button><figcaption>${esc(img.alt)} <span aria-hidden="true">↗</span></figcaption><p class="sr-only">${esc(img.description)}</p></figure>`;
+  return `<figure class="reading-figure" id="concept"><span id="gallery" class="section-anchor" aria-hidden="true"></span><button data-image="0" aria-label="放大图解：${esc(img.alt)}"><img src="${root}${esc(img.src)}" alt="${esc(img.alt)}" width="${img.width}" height="${img.height}"><span class="zoom-hint" aria-hidden="true">⤢ 点击放大 · 双指缩放</span></button><figcaption>${esc(img.alt)}</figcaption><p class="sr-only">${esc(img.description)}</p></figure>`;
 }
 
 function renderReader(chapter, anchor){
@@ -141,11 +141,43 @@ function renderReader(chapter, anchor){
     const img=chapter.images[Number(button.dataset.image)];
     $('#image-full').src=root+img.src;$('#image-full').alt=img.alt;
     $('#image-caption').textContent=img.alt;$('#image-original').href=root+img.src;
-    $('#image-dialog').showModal();$('.image-viewport').scrollTop=0;
+    $('#image-dialog').showModal();openImage();
   }));
   $('.sidebar-link.active')?.scrollIntoView({block:'nearest',behavior:'instant'});
   jumpTo(anchor);rendering=false;updateProgress(false);
 }
+
+const zoom={value:1,min:1,max:5};
+function openImage(){
+  const viewport=$('.image-viewport'), image=$('#image-full');
+  // Phones open at about 2.4x so the diagram text is readable; pan by dragging.
+  zoom.value=innerWidth<760?2.4:1;
+  image.style.width=zoom.value*100+'%';viewport.scrollTop=0;viewport.scrollLeft=0;
+  if(zoom.value>1)viewport.scrollLeft=(viewport.scrollWidth-viewport.clientWidth)/2;
+}
+function setZoom(value,cx,cy){
+  const viewport=$('.image-viewport'), image=$('#image-full');
+  const next=Math.min(zoom.max,Math.max(zoom.min,value)), old=zoom.value;
+  const px=(viewport.scrollLeft+cx)/old, py=(viewport.scrollTop+cy)/old;
+  zoom.value=next;image.style.width=next*100+'%';
+  viewport.scrollLeft=px*next-cx;viewport.scrollTop=py*next-cy;
+}
+$('#image-close').addEventListener('click',()=>$('#image-dialog').close());
+for(const [id,factor] of [['zoom-in',1.4],['zoom-out',1/1.4]])$('#'+id).addEventListener('click',()=>{const v=$('.image-viewport');setZoom(zoom.value*factor,v.clientWidth/2,v.clientHeight/2);});
+$('#zoom-reset').addEventListener('click',()=>{const v=$('.image-viewport');setZoom(1,v.clientWidth/2,v.clientHeight/2);});
+(()=>{
+  const viewport=$('.image-viewport');let start=null;
+  const distance=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+  viewport.addEventListener('touchstart',e=>{if(e.touches.length===2)start={d:distance(e.touches),z:zoom.value};},{passive:true});
+  viewport.addEventListener('touchmove',e=>{
+    if(e.touches.length!==2||!start)return;
+    e.preventDefault();
+    const r=viewport.getBoundingClientRect();
+    setZoom(start.z*distance(e.touches)/start.d,(e.touches[0].clientX+e.touches[1].clientX)/2-r.left,(e.touches[0].clientY+e.touches[1].clientY)/2-r.top);
+  },{passive:false});
+  viewport.addEventListener('touchend',e=>{if(e.touches.length<2)start=null;});
+  viewport.addEventListener('wheel',e=>{if(!e.ctrlKey)return;e.preventDefault();const r=viewport.getBoundingClientRect();setZoom(zoom.value*Math.exp(-e.deltaY/200),e.clientX-r.left,e.clientY-r.top);},{passive:false});
+})();
 
 function changeFont(delta){
   fontSize=Math.min(23,Math.max(17,fontSize+delta));
