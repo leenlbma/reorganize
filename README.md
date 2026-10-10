@@ -6,6 +6,25 @@ LeenMa 的十二篇系列文章，讨论 AI 如何改变工作、团队、协作
 
 [在线阅读](https://leenlbma.github.io/reorganize/)
 
+## English summary
+
+**Reorganize** is a series of twelve Chinese-language essays by LeenMa on how work, teams and authority may need to be reorganized as AI agents take on more of the work. The essays cover task delegation, why teams still matter, whether AI narrows or widens gaps, rules and processes, who defines organizational facts, decision rights, accountability, incentives for sharing expertise, how the next generation of experts learns, managing agents as members of a workflow, the boundaries of the firm, and a practical way to begin using five maps. This repository contains the essays, one diagram per essay, and the source of the reading site. The essays and original diagrams are licensed under [CC BY 4.0](LICENSE); the site code is MIT. Read online: <https://leenlbma.github.io/reorganize/>
+
+English titles of the twelve essays (unofficial translations; the articles are in Chinese):
+
+1. When "organizing work" can itself be done by AI
+2. After the one-person company, why do we still need teams?
+3. Will AI close the gap, or amplify the strong?
+4. In the age of AI, do we still need "processes"?
+5. Who gets to define an organization's facts?
+6. Organizations get flatter, but power may become more concentrated
+7. When AI takes on the work, who takes responsibility?
+8. Why would employees teach their experience to AI?
+9. If AI takes over junior work, where do the next experts come from?
+10. When agents become members of the organization, what do managers manage?
+11. When every capability can be called on demand, why do we still need companies?
+12. Don't start by changing the org chart: how to begin "reorganizing"
+
 ## 阅读文章
 
 1. [当“组织工作”本身也能被 AI 执行](articles/01-work.md)
@@ -50,10 +69,14 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory website/dist
 
 GitHub Pages 的发布源选择 **GitHub Actions**。推送到 `main` 后，工作流先构建并检查，再部署 `website/dist/`；PR 只检查。项目子路径与章节刷新使用同一套相对资源地址，不需要后端或路径重写。
 
+这些文章也发布在我的小红书：[LeenMa 的小红书主页](https://www.xiaohongshu.com/user/profile/5b4a2a3df7e8b94fcb3a2d6b)。欢迎在那里阅读、交流。
+
 欢迎通过 Issue 提出文章纠错、不同观点或网站问题，提供具体篇章、表述和依据即可。修改可提交 PR，保留作者署名和已有引用。
 
 ## 许可
 
-原创文章与图解采用 [CC BY-SA 4.0](LICENSE)，原创网站与工具代码采用 [MIT](LICENSE-CODE)。第三方材料保留原权利，范围见 [NOTICE](NOTICE.md)。
+原创文章与图解采用 [CC BY 4.0](LICENSE)，原创网站与工具代码采用 [MIT](LICENSE-CODE)。第三方材料保留原权利，范围见 [NOTICE](NOTICE.md)。
+
+AI 读者可从 [llms.txt](llms.txt) 按任务找到各篇原文。引用请参考 [CITATION.cff](CITATION.cff)。
 
 作者：**LeenMa**。

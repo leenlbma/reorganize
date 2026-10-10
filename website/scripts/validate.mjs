@@ -60,9 +60,22 @@ for (const [, url] of index.matchAll(/(?:src|href)="([^"]+)"/g)) {
   assert.ok(!url.startsWith('/'), `Root-relative asset: ${url}`);
   if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, url)), `Missing entry asset: ${url}`);
 }
-const allowedOutput = new Set(['.nojekyll', 'articles', 'images', 'content.json', 'index.html', 'app.js', 'styles.css', 'favicon.svg', 'CONTENT-LICENSE.txt', 'LICENSE', 'LICENSE-CODE']);
+const allowedOutput = new Set(['.nojekyll', 'articles', 'images', 'content.json', 'index.html', 'app.js', 'styles.css', 'favicon.svg', 'og-cover.png', 'CONTENT-LICENSE.txt', 'LICENSE', 'LICENSE-CODE']);
 for (const item of fs.readdirSync(output)) assert.ok(allowedOutput.has(item), `Unexpected output: ${item}`);
 assert.ok(fs.existsSync(path.join(output, '.nojekyll')));
 assert.equal(fs.readFileSync(path.join(output, 'LICENSE'), 'utf8'), fs.readFileSync(path.join(repo, 'LICENSE'), 'utf8'));
 assert.ok(fs.readFileSync(path.join(repo, 'LICENSE-CODE'), 'utf8').startsWith('MIT License'));
+const site_url = 'https://leenlbma.github.io/reorganize/';
+const metaTag = (attr, key) => index.match(new RegExp(`<meta ${attr}="${key}" content="([^"]+)"`))?.[1];
+for (const key of ['og:title', 'og:description', 'og:type', 'og:url', 'og:image']) assert.ok(metaTag('property', key), `Missing ${key}`);
+assert.equal(metaTag('name', 'twitter:card'), 'summary_large_image');
+assert.equal(metaTag('property', 'og:url'), site_url);
+assert.equal(metaTag('property', 'og:image'), site_url + 'og-cover.png');
+assert.ok(index.includes(`<link rel="canonical" href="${site_url}">`), 'Missing canonical');
+const cover = fs.readFileSync(path.join(output, 'og-cover.png'));
+assert.equal(cover.readUInt32BE(16), 1200); assert.equal(cover.readUInt32BE(20), 630);
+assert.ok(fs.readFileSync(path.join(repo, 'LICENSE'), 'utf8').startsWith('Attribution 4.0 International'), 'LICENSE must be CC BY 4.0');
+for (const file of ['README.md', 'NOTICE.md', 'website/src/app.js', ...data.map(a => `articles/${a.file}`)]) {
+  assert.ok(!/BY-SA|ShareAlike|相同方式/i.test(fs.readFileSync(path.join(repo, file), 'utf8')), `Stale license text: ${file}`);
+}
 console.log(`PASS: 12 complete articles, ${data.reduce((n, a) => n + a.headings.length, 0)} headings, 12 diagrams, downloads, licenses and ${links} Markdown links.`);
