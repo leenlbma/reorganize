@@ -146,7 +146,7 @@ for (const article of data) {
   assert.ok(!/href="#\/read/.test(html), `Legacy hash link left in static page: ${id}`);
   for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     assert.ok(!url.startsWith('/'), `Root-relative asset: ${id} -> ${url}`);
-    if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, 'read', id, url.split('#')[0])), `Missing asset on static page ${id}: ${url}`);
+    if (!/^(?:#|https?:|mailto:)/.test(url)) assert.ok(fs.existsSync(path.join(output, 'read', id, url.split('#')[0].split('?')[0])), `Missing asset on static page ${id}: ${url}`);
   }
 }
 const sitemap = fs.readFileSync(path.join(output, 'sitemap.xml'), 'utf8');
